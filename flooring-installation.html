@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18090208680');
+</script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Flooring Installation Estimate | GetEstimateFast</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+/* mantém mesmo estilo do bathroom */
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+<div class="badge">Flooring Installation • Riverview Area</div>
+<h1>Get a flooring installation estimate within 24 hours</h1>
+<p class="sub">
+Answer a few quick questions about your flooring project to receive a fast and accurate estimate.
+</p>
+</div>
+
+<div class="form-shell">
+
+<div class="progress-wrap">
+<div class="progress-top">
+<span id="stepLabel">Step 1 of 10</span>
+<span id="stepTitleMini">Project Type</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+</div>
+
+<form action="https://formsubmit.co/getestimatefast@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Flooring Lead">
+<input type="hidden" name="_captcha" value="false">
+
+<!-- STEP 1 -->
+<div class="step active" data-title="Floor Type">
+<h2>What type of flooring do you need?</h2>
+
+<div class="option-grid">
+<button type="button" class="option-btn">Tile</button>
+<button type="button" class="option-btn">Vinyl</button>
+<button type="button" class="option-btn">Laminate</button>
+<button type="button" class="option-btn">Hardwood</button>
+<button type="button" class="option-btn">Carpet</button>
+</div>
+
+<button type="button" onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 2 -->
+<div class="step" data-title="Scope">
+<h2>What do you need done?</h2>
+
+<div class="option-grid">
+<button type="button" class="option-btn">Install new floor</button>
+<button type="button" class="option-btn">Replace existing floor</button>
+<button type="button" class="option-btn">Repair flooring</button>
+</div>
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 3 -->
+<div class="step" data-title="Size">
+<h2>What is the size of the area?</h2>
+
+<div class="option-grid">
+<button type="button" class="option-btn">Small room</button>
+<button type="button" class="option-btn">Medium area</button>
+<button type="button" class="option-btn">Large area</button>
+<button type="button" class="option-btn">Whole house</button>
+</div>
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 4 -->
+<div class="step" data-title="Subfloor">
+<h2>Condition of the subfloor?</h2>
+
+<div class="option-grid">
+<button type="button" class="option-btn">Good condition</button>
+<button type="button" class="option-btn">Needs repair</button>
+<button type="button" class="option-btn">Not sure</button>
+</div>
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 5 -->
+<div class="step" data-title="Details">
+<h2>Additional details</h2>
+
+<textarea placeholder="Describe your flooring project..."></textarea>
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 6 -->
+<div class="step" data-title="Timeline">
+<h2>When do you want to start?</h2>
+
+<div class="option-grid">
+<button type="button" class="option-btn">ASAP</button>
+<button type="button" class="option-btn">30 days</button>
+<button type="button" class="option-btn">60 days</button>
+</div>
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 7 -->
+<div class="step" data-title="Location">
+<h2>Project location</h2>
+
+<input type="text" placeholder="City">
+<input type="text" placeholder="ZIP Code">
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 8 -->
+<div class="step" data-title="Photos">
+<h2>Add photos (optional)</h2>
+
+<input type="file" multiple>
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 9 -->
+<div class="step" data-title="Contact">
+<h2>Your contact info</h2>
+
+<input type="text" placeholder="Name">
+<input type="text" placeholder="Phone">
+<input type="email" placeholder="Email">
+
+<button onclick="prevStep()">Back</button>
+<button onclick="nextStep()">Next</button>
+</div>
+
+<!-- STEP 10 -->
+<div class="step" data-title="Submit">
+<h2>Submit your request</h2>
+
+<button type="submit">Request Estimate</button>
+
+</div>
+
+</form>
+</div>
+</div>
+
+<script>
+let currentStep = 0;
+const steps = document.querySelectorAll('.step');
+
+function showStep(i){
+steps.forEach((s,index)=>s.style.display = index === i ? 'block' : 'none');
+}
+
+function nextStep(){
+if(currentStep < steps.length - 1){
+currentStep++;
+showStep(currentStep);
+}
+}
+
+function prevStep(){
+if(currentStep > 0){
+currentStep--;
+showStep(currentStep);
+}
+}
+
+showStep(0);
+</script>
+
+</body>
+</html>
