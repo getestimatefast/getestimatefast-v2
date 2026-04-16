@@ -1,209 +1,1007 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18090208680');
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18090208680');
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flooring Installation Estimate | GetEstimateFast</title>
+  <style>
+    * { box-sizing: border-box; }
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
 
-<title>Flooring Installation Estimate | GetEstimateFast</title>
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 22px 18px 60px;
+    }
 
-<link rel="stylesheet" href="styles.css">
+    .hero {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      margin-bottom: 18px;
+    }
 
-<style>
-/* mantém mesmo estilo do bathroom */
-</style>
+    .badge {
+      display: inline-block;
+      background: #e8f7ec;
+      color: #18794e;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
 
+    h1 {
+      font-size: 38px;
+      line-height: 1.08;
+      margin: 0 0 10px;
+    }
+
+    .sub {
+      font-size: 17px;
+      color: #4b5563;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .mobile-hide {
+      display: block;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .info-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .info-card span {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .form-shell {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    }
+
+    .progress-wrap {
+      margin-bottom: 22px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #4b5563;
+      font-weight: 700;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 8%;
+      background: #111827;
+      transition: width 0.25s ease;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin: 0 0 10px;
+      line-height: 1.15;
+    }
+
+    .step-desc {
+      color: #6b7280;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+
+    .option-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .option-btn,
+    .nav-btn,
+    .submit-btn,
+    .contact-link {
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .option-btn {
+      width: 100%;
+      padding: 18px 16px;
+      text-align: left;
+      background: #111827;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .option-btn:hover,
+    .nav-btn:hover,
+    .submit-btn:hover,
+    .contact-link:hover {
+      opacity: 0.95;
+    }
+
+    .option-btn.selected {
+      background: #18794e;
+    }
+
+    .checkbox-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-item input {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .field-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .two-col {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 16px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .notice-box {
+      background: #fff8e7;
+      border: 1px solid #f3d27a;
+      padding: 16px;
+      border-radius: 14px;
+      color: #5c4500;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .soft-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 16px;
+      border-radius: 14px;
+      margin-top: 14px;
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    .nav-btn,
+    .submit-btn {
+      padding: 16px 18px;
+      width: 100%;
+      background: #111827;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .nav-btn.secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .summary {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+
+    .summary-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .summary-item span {
+      font-size: 15px;
+      color: #111827;
+      line-height: 1.5;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 13px 16px;
+      font-weight: 700;
+    }
+
+    .contact-link.alt {
+      background: #25d366;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    .error {
+      color: #b91c1c;
+      font-size: 14px;
+      margin-top: 12px;
+      display: none;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-hide {
+        display: none;
+      }
+
+      h1 { font-size: 30px; }
+      h2 { font-size: 24px; }
+
+      .form-shell, .hero { padding: 20px; }
+      .two-col, .three-col, .info-grid { grid-template-columns: 1fr; }
+      .nav-row { flex-direction: column; }
+
+      .container {
+        padding-top: 12px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <div class="hero">
+      <div class="badge">Flooring Installation • Riverview Area</div>
+      <h1>Flooring Installation Estimate</h1>
+      <p class="sub">
+        Answer a few quick questions to request your flooring installation estimate.
+      </p>
 
-<div class="container">
+      <div class="mobile-hide">
+        <div class="info-grid">
+          <div class="info-card">
+            <strong>Fast response</strong>
+            <span>Estimates within 24 hours are available when enough project details are provided.</span>
+          </div>
+          <div class="info-card">
+            <strong>Simple process</strong>
+            <span>Submit organized flooring project details through a guided step-by-step form.</span>
+          </div>
+          <div class="info-card">
+            <strong>Local service area</strong>
+            <span>Serving Riverview and surrounding areas within 60 miles.</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="hero">
-<div class="badge">Flooring Installation • Riverview Area</div>
-<h1>Get a flooring installation estimate within 24 hours</h1>
-<p class="sub">
-Answer a few quick questions about your flooring project to receive a fast and accurate estimate.
-</p>
-</div>
+    <div class="form-shell">
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span id="stepLabel">Step 1 of 12</span>
+          <span id="stepTitleMini">Floor Type</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
 
-<div class="form-shell">
+      <form id="flooringForm" action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="New Flooring Installation Lead" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="Service" value="Flooring Installation" />
+        <input type="hidden" name="Floor Type" id="floorTypeInput" />
+        <input type="hidden" name="Materials" id="materialsInput" />
+        <input type="hidden" name="Area Size" id="areaSizeInput" />
+        <input type="hidden" name="Measurement Method" id="measurementMethodInput" />
+        <input type="hidden" name="Project Details" id="projectDetailsInput" />
+        <input type="hidden" name="Subfloor Condition" id="subfloorInput" />
+        <input type="hidden" name="Timeline" id="timelineInput" />
+        <input type="hidden" name="On-Site Evaluation" id="visitInput" />
 
-<div class="progress-wrap">
-<div class="progress-top">
-<span id="stepLabel">Step 1 of 10</span>
-<span id="stepTitleMini">Project Type</span>
-</div>
-<div class="progress-bar">
-<div class="progress-fill" id="progressFill"></div>
-</div>
-</div>
+        <!-- STEP 1 -->
+        <section class="step active" data-title="Floor Type">
+          <h2>What type of flooring do you need?</h2>
+          <p class="step-desc">Select the option that best matches your flooring project.</p>
 
-<form action="https://formsubmit.co/getestimatefast@gmail.com" method="POST">
+          <div class="option-grid" data-group="floorType">
+            <button type="button" class="option-btn" data-value="Tile">Tile</button>
+            <button type="button" class="option-btn" data-value="Vinyl">Vinyl</button>
+            <button type="button" class="option-btn" data-value="Laminate">Laminate</button>
+            <button type="button" class="option-btn" data-value="Hardwood">Hardwood</button>
+            <button type="button" class="option-btn" data-value="Engineered wood">Engineered wood</button>
+            <button type="button" class="option-btn" data-value="Carpet">Carpet</button>
+            <button type="button" class="option-btn" data-value="Not sure yet">Not sure yet</button>
+          </div>
 
-<input type="hidden" name="_subject" value="New Flooring Lead">
-<input type="hidden" name="_captcha" value="false">
+          <div class="error">Please select one option to continue.</div>
 
-<!-- STEP 1 -->
-<div class="step active" data-title="Floor Type">
-<h2>What type of flooring do you need?</h2>
+          <div class="nav-row">
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-<div class="option-grid">
-<button type="button" class="option-btn">Tile</button>
-<button type="button" class="option-btn">Vinyl</button>
-<button type="button" class="option-btn">Laminate</button>
-<button type="button" class="option-btn">Hardwood</button>
-<button type="button" class="option-btn">Carpet</button>
-</div>
+        <!-- STEP 2 -->
+        <section class="step" data-title="Scope of Work">
+          <h2>What work is needed?</h2>
+          <p class="step-desc">Select all that apply to your flooring project.</p>
 
-<button type="button" onclick="nextStep()">Next</button>
-</div>
+          <div class="checkbox-list">
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Install new flooring">Install new flooring</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Replace existing flooring">Replace existing flooring</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Remove old flooring">Remove old flooring</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Repair damaged flooring">Repair damaged flooring</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Subfloor repair">Subfloor repair</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Leveling">Leveling</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Baseboard installation">Baseboard installation</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Quarter round installation">Quarter round installation</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Stair flooring">Stair flooring</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Transitions and trims">Transitions and trims</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Final cleaning">Final cleaning</label>
+          </div>
 
-<!-- STEP 2 -->
-<div class="step" data-title="Scope">
-<h2>What do you need done?</h2>
+          <div class="error">Please select at least one scope item.</div>
 
-<div class="option-grid">
-<button type="button" class="option-btn">Install new floor</button>
-<button type="button" class="option-btn">Replace existing floor</button>
-<button type="button" class="option-btn">Repair flooring</button>
-</div>
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+        <!-- STEP 3 -->
+        <section class="step" data-title="Materials">
+          <h2>How will materials be handled?</h2>
+          <p class="step-desc">Choose the option that best matches your project.</p>
 
-<!-- STEP 3 -->
-<div class="step" data-title="Size">
-<h2>What is the size of the area?</h2>
+          <div class="option-grid" data-group="materials">
+            <button type="button" class="option-btn" data-value="I already have materials">I already have materials</button>
+            <button type="button" class="option-btn" data-value="I need help choosing materials">I need help choosing materials</button>
+            <button type="button" class="option-btn" data-value="I want help purchasing materials">I want help purchasing materials</button>
+            <button type="button" class="option-btn" data-value="Labor only">Labor only</button>
+            <button type="button" class="option-btn" data-value="Labor + rough materials">Labor + rough materials</button>
+          </div>
 
-<div class="option-grid">
-<button type="button" class="option-btn">Small room</button>
-<button type="button" class="option-btn">Medium area</button>
-<button type="button" class="option-btn">Large area</button>
-<button type="button" class="option-btn">Whole house</button>
-</div>
+          <div class="error">Please select one option to continue.</div>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-<!-- STEP 4 -->
-<div class="step" data-title="Subfloor">
-<h2>Condition of the subfloor?</h2>
+        <!-- STEP 4 -->
+        <section class="step" data-title="Area Size">
+          <h2>Do you know the size of the area?</h2>
+          <p class="step-desc">This helps us review your estimate more accurately and faster.</p>
 
-<div class="option-grid">
-<button type="button" class="option-btn">Good condition</button>
-<button type="button" class="option-btn">Needs repair</button>
-<button type="button" class="option-btn">Not sure</button>
-</div>
+          <div class="option-grid" data-group="areaSize">
+            <button type="button" class="option-btn" data-value="Small room under 200 sqft">Small room under 200 sqft</button>
+            <button type="button" class="option-btn" data-value="Medium area 200 to 500 sqft">Medium area 200 to 500 sqft</button>
+            <button type="button" class="option-btn" data-value="Large area 500 to 1000 sqft">Large area 500 to 1000 sqft</button>
+            <button type="button" class="option-btn" data-value="Whole house">Whole house</button>
+            <button type="button" class="option-btn" data-value="I want to enter exact measurements">I want to enter exact measurements</button>
+            <button type="button" class="option-btn" data-value="I do not know the size">I do not know the size</button>
+          </div>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+          <div id="measurementNoticeBox" class="notice-box hidden">
+            Accurate estimates may require room measurements. If the size is unknown, an on-site evaluation may be needed and the 24-hour estimate may not apply.
+          </div>
 
-<!-- STEP 5 -->
-<div class="step" data-title="Details">
-<h2>Additional details</h2>
+          <div id="measurementExactBox" class="hidden">
+            <div class="soft-box">
+              <p class="step-desc" style="margin-bottom:14px;">Enter the project measurements below.</p>
+              <div class="field-grid three-col">
+                <input type="text" id="areaLength" name="Area Length (feet)" placeholder="Length (feet)" />
+                <input type="text" id="areaWidth" name="Area Width (feet)" placeholder="Width (feet)" />
+                <input type="text" id="areaRooms" name="Number of Rooms" placeholder="Number of rooms" />
+              </div>
+            </div>
+          </div>
 
-<textarea placeholder="Describe your flooring project..."></textarea>
+          <div class="error">Please complete the area size step to continue.</div>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-<!-- STEP 6 -->
-<div class="step" data-title="Timeline">
-<h2>When do you want to start?</h2>
+        <!-- STEP 5 -->
+        <section class="step" data-title="Subfloor Condition">
+          <h2>What is the condition of the subfloor?</h2>
+          <p class="step-desc">Select the option that best describes the current condition.</p>
 
-<div class="option-grid">
-<button type="button" class="option-btn">ASAP</button>
-<button type="button" class="option-btn">30 days</button>
-<button type="button" class="option-btn">60 days</button>
-</div>
+          <div class="option-grid" data-group="subfloor">
+            <button type="button" class="option-btn" data-value="Good condition">Good condition</button>
+            <button type="button" class="option-btn" data-value="Needs repair">Needs repair</button>
+            <button type="button" class="option-btn" data-value="May need leveling">May need leveling</button>
+            <button type="button" class="option-btn" data-value="Water damage suspected">Water damage suspected</button>
+            <button type="button" class="option-btn" data-value="Not sure">Not sure</button>
+          </div>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+          <div class="error">Please select one option to continue.</div>
 
-<!-- STEP 7 -->
-<div class="step" data-title="Location">
-<h2>Project location</h2>
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-<input type="text" placeholder="City">
-<input type="text" placeholder="ZIP Code">
+        <!-- STEP 6 -->
+        <section class="step" data-title="Project Details">
+          <h2>What details apply to this project?</h2>
+          <p class="step-desc">Choose the option that best matches your project status.</p>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+          <div class="option-grid" data-group="projectDetails">
+            <button type="button" class="option-btn" data-value="Flooring only">Flooring only</button>
+            <button type="button" class="option-btn" data-value="Flooring plus baseboards">Flooring plus baseboards</button>
+            <button type="button" class="option-btn" data-value="Includes stairs">Includes stairs</button>
+            <button type="button" class="option-btn" data-value="Furniture may need to be moved">Furniture may need to be moved</button>
+            <button type="button" class="option-btn" data-value="Tenant occupied property">Tenant occupied property</button>
+            <button type="button" class="option-btn" data-value="Vacant property">Vacant property</button>
+          </div>
 
-<!-- STEP 8 -->
-<div class="step" data-title="Photos">
-<h2>Add photos (optional)</h2>
+          <div class="error">Please select one option to continue.</div>
 
-<input type="file" multiple>
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+        <!-- STEP 7 -->
+        <section class="step" data-title="Project Description">
+          <h2>Tell us more about your flooring project</h2>
+          <p class="step-desc">The more details you provide, the more accurate your estimate will be.</p>
 
-<!-- STEP 9 -->
-<div class="step" data-title="Contact">
-<h2>Your contact info</h2>
+          <textarea id="projectDescription" name="Project Description" placeholder="Describe what you want done in your flooring project.
 
-<input type="text" placeholder="Name">
-<input type="text" placeholder="Phone">
-<input type="email" placeholder="Email">
+Example:
+- Replace old carpet with vinyl plank
+- Install flooring in living room and hallway
+- Remove baseboards and reinstall
+- Repair damaged subfloor near one wall
+- Match existing flooring in adjacent area"></textarea>
 
-<button onclick="prevStep()">Back</button>
-<button onclick="nextStep()">Next</button>
-</div>
+          <div class="hint">You can include room names, material ideas, current floor condition, or any specific concerns.</div>
 
-<!-- STEP 10 -->
-<div class="step" data-title="Submit">
-<h2>Submit your request</h2>
+          <div class="error">Please add a short project description to continue.</div>
 
-<button type="submit">Request Estimate</button>
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-</div>
+        <!-- STEP 8 -->
+        <section class="step" data-title="Timeline">
+          <h2>When would you like to start?</h2>
+          <p class="step-desc">Choose the timeline that best fits your flooring project.</p>
 
-</form>
-</div>
-</div>
+          <div class="option-grid" data-group="timeline">
+            <button type="button" class="option-btn" data-value="As soon as possible">As soon as possible</button>
+            <button type="button" class="option-btn" data-value="Within 30 days">Within 30 days</button>
+            <button type="button" class="option-btn" data-value="Within 60 days">Within 60 days</button>
+            <button type="button" class="option-btn" data-value="Within 90 days">Within 90 days</button>
+            <button type="button" class="option-btn" data-value="Just planning for now">Just planning for now</button>
+          </div>
 
-<script>
-let currentStep = 0;
-const steps = document.querySelectorAll('.step');
+          <div class="error">Please select one option to continue.</div>
 
-function showStep(i){
-steps.forEach((s,index)=>s.style.display = index === i ? 'block' : 'none');
-}
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
 
-function nextStep(){
-if(currentStep < steps.length - 1){
-currentStep++;
-showStep(currentStep);
-}
-}
+        <!-- STEP 9 -->
+        <section class="step" data-title="Location">
+          <h2>Where is the project located?</h2>
+          <p class="step-desc">Please provide the city and ZIP code of the property.</p>
 
-function prevStep(){
-if(currentStep > 0){
-currentStep--;
-showStep(currentStep);
-}
-}
+          <div class="field-grid two-col">
+            <input type="text" id="city" name="City" placeholder="City" />
+            <input type="text" id="zip" name="ZIP Code" placeholder="ZIP Code" />
+          </div>
 
-showStep(0);
-</script>
+          <div class="error">Please enter city and ZIP code.</div>
 
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 10 -->
+        <section class="step" data-title="On-Site Evaluation">
+          <h2>Do you think an on-site evaluation may be needed?</h2>
+
+          <div class="notice-box">
+            Some flooring projects may require an in-person evaluation. If a site visit is needed, a $100 service fee may apply. This fee will be credited toward your project if you move forward with the team.
+          </div>
+
+          <div class="option-grid" data-group="visit">
+            <button type="button" class="option-btn" data-value="No, I do not need a visit">No, I do not need a visit</button>
+            <button type="button" class="option-btn" data-value="Yes, I may need an on-site evaluation">Yes, I may need an on-site evaluation</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 11 -->
+        <section class="step" data-title="Photos & Contact">
+          <h2>Add photos and your contact information</h2>
+          <p class="step-desc">Photos are optional, but they help us review your flooring project more accurately.</p>
+
+          <input type="file" name="Project Photos" multiple accept="image/*" />
+          <div class="hint" style="margin-bottom:16px;">
+            Additional project photos can also be shared later using your preferred contact method.
+          </div>
+
+          <div class="field-grid">
+            <input type="text" id="fullName" name="Full Name" placeholder="Full Name" />
+            <input type="text" id="phone" name="Phone Number" placeholder="Phone Number" />
+            <input type="email" id="email" name="Email Address" placeholder="Email Address" />
+            <select id="contactMethod" name="Preferred Contact Method">
+              <option value="">Preferred contact method</option>
+              <option>Phone call</option>
+              <option>Text message</option>
+              <option>WhatsApp</option>
+              <option>Email</option>
+            </select>
+          </div>
+
+          <div class="error">Please complete name, phone, email, and preferred contact method.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 12 -->
+        <section class="step" data-title="Review & Submit">
+          <h2>Review your request</h2>
+          <p class="step-desc">Please review your flooring project details before submitting.</p>
+
+          <div class="summary" id="summaryBox"></div>
+
+          <div class="contact-links">
+            <a class="contact-link" id="smsBackup" href="#">Send by text instead</a>
+            <a class="contact-link" id="emailBackup" href="#">Send by email instead</a>
+            <a class="contact-link alt" id="whatsAppBackup" href="#" target="_blank">Send by WhatsApp instead</a>
+          </div>
+
+          <div class="footer-note">
+            GetEstimateFast is a lead generation platform that connects customers with construction professionals. Depending on the project, services may be performed by our team or by independent contractors.
+          </div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="submit" class="submit-btn">Request My Estimate</button>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const steps = Array.from(document.querySelectorAll('.step'));
+    let currentStep = 0;
+
+    const stepLabel = document.getElementById('stepLabel');
+    const stepTitleMini = document.getElementById('stepTitleMini');
+    const progressFill = document.getElementById('progressFill');
+
+    const singleChoiceState = {
+      floorType: '',
+      materials: '',
+      areaSize: '',
+      measurementMethod: '',
+      subfloor: '',
+      projectDetails: '',
+      timeline: '',
+      visit: ''
+    };
+
+    document.querySelectorAll('[data-group]').forEach(group => {
+      const groupName = group.getAttribute('data-group');
+      group.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          singleChoiceState[groupName] = btn.dataset.value;
+
+          if (groupName === 'floorType') document.getElementById('floorTypeInput').value = btn.dataset.value;
+          if (groupName === 'materials') document.getElementById('materialsInput').value = btn.dataset.value;
+          if (groupName === 'areaSize') {
+            document.getElementById('areaSizeInput').value = btn.dataset.value;
+            handleAreaSize();
+          }
+          if (groupName === 'subfloor') document.getElementById('subfloorInput').value = btn.dataset.value;
+          if (groupName === 'projectDetails') document.getElementById('projectDetailsInput').value = btn.dataset.value;
+          if (groupName === 'timeline') document.getElementById('timelineInput').value = btn.dataset.value;
+          if (groupName === 'visit') document.getElementById('visitInput').value = btn.dataset.value;
+
+          hideError(currentStep);
+        });
+      });
+    });
+
+    function handleAreaSize() {
+      const noticeBox = document.getElementById('measurementNoticeBox');
+      const exactBox = document.getElementById('measurementExactBox');
+
+      if (singleChoiceState.areaSize === 'I do not know the size') {
+        noticeBox.classList.remove('hidden');
+        exactBox.classList.add('hidden');
+        document.getElementById('measurementMethodInput').value = 'Unknown size';
+        document.getElementById('areaLength').value = '';
+        document.getElementById('areaWidth').value = '';
+        document.getElementById('areaRooms').value = '';
+      } else if (singleChoiceState.areaSize === 'I want to enter exact measurements') {
+        noticeBox.classList.add('hidden');
+        exactBox.classList.remove('hidden');
+        document.getElementById('measurementMethodInput').value = 'Exact measurements';
+      } else if (singleChoiceState.areaSize) {
+        noticeBox.classList.add('hidden');
+        exactBox.classList.add('hidden');
+        document.getElementById('measurementMethodInput').value = 'Preset size';
+        document.getElementById('areaLength').value = '';
+        document.getElementById('areaWidth').value = '';
+        document.getElementById('areaRooms').value = '';
+      } else {
+        noticeBox.classList.add('hidden');
+        exactBox.classList.add('hidden');
+        document.getElementById('measurementMethodInput').value = '';
+      }
+    }
+
+    function showStep(index) {
+      steps.forEach((step, i) => step.classList.toggle('active', i === index));
+      currentStep = index;
+
+      const title = steps[index].dataset.title || '';
+      stepLabel.textContent = `Step ${index + 1} of ${steps.length}`;
+      stepTitleMini.textContent = title;
+      progressFill.style.width = `${((index + 1) / steps.length) * 100}%`;
+
+      if (index === steps.length - 1) {
+        buildSummary();
+        buildBackupLinks();
+      }
+    }
+
+    function getErrorBox(index) {
+      return steps[index].querySelector('.error');
+    }
+
+    function showError(index, message) {
+      const box = getErrorBox(index);
+      if (!box) return;
+      box.textContent = message;
+      box.style.display = 'block';
+    }
+
+    function hideError(index) {
+      const box = getErrorBox(index);
+      if (!box) return;
+      box.style.display = 'none';
+    }
+
+    function validateStep(index) {
+      hideError(index);
+
+      if (index === 0 && !singleChoiceState.floorType) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 1) {
+        const checked = steps[index].querySelectorAll('input[type="checkbox"]:checked');
+        if (checked.length === 0) {
+          showError(index, 'Please select at least one scope item.');
+          return false;
+        }
+      }
+
+      if (index === 2 && !singleChoiceState.materials) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 3) {
+        if (!singleChoiceState.areaSize) {
+          showError(index, 'Please select one option to continue.');
+          return false;
+        }
+
+        if (singleChoiceState.areaSize === 'I want to enter exact measurements') {
+          const length = document.getElementById('areaLength').value.trim();
+          const width = document.getElementById('areaWidth').value.trim();
+          const rooms = document.getElementById('areaRooms').value.trim();
+          if (!length || !width || !rooms) {
+            showError(index, 'Please enter length, width, and number of rooms.');
+            return false;
+          }
+        }
+      }
+
+      if (index === 4 && !singleChoiceState.subfloor) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 5 && !singleChoiceState.projectDetails) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 6) {
+        const desc = document.getElementById('projectDescription').value.trim();
+        if (desc.length < 10) {
+          showError(index, 'Please add a short project description to continue.');
+          return false;
+        }
+      }
+
+      if (index === 7 && !singleChoiceState.timeline) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 8) {
+        const city = document.getElementById('city').value.trim();
+        const zip = document.getElementById('zip').value.trim();
+        if (!city || !zip) {
+          showError(index, 'Please enter city and ZIP code.');
+          return false;
+        }
+      }
+
+      if (index === 9 && !singleChoiceState.visit) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 10) {
+        const name = document.getElementById('fullName').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const method = document.getElementById('contactMethod').value.trim();
+        if (!name || !phone || !email || !method) {
+          showError(index, 'Please complete name, phone, email, and preferred contact method.');
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function nextStep() {
+      if (!validateStep(currentStep)) return;
+      if (currentStep < steps.length - 1) showStep(currentStep + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function prevStep() {
+      if (currentStep > 0) showStep(currentStep - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function getScopeValues() {
+      return Array.from(document.querySelectorAll('input[name="Scope of Work[]"]:checked')).map(i => i.value);
+    }
+
+    function getAreaSummary() {
+      if (singleChoiceState.areaSize === 'I want to enter exact measurements') {
+        return `Exact measurements: ${document.getElementById('areaLength').value || 'N/A'} ft x ${document.getElementById('areaWidth').value || 'N/A'} ft • Rooms: ${document.getElementById('areaRooms').value || 'N/A'}`;
+      }
+      return singleChoiceState.areaSize || '—';
+    }
+
+    function buildSummary() {
+      const summaryBox = document.getElementById('summaryBox');
+      const scope = getScopeValues();
+
+      const items = [
+        ['Floor Type', singleChoiceState.floorType || '—'],
+        ['Scope of Work', scope.length ? scope.join(', ') : '—'],
+        ['Materials', singleChoiceState.materials || '—'],
+        ['Area Size', getAreaSummary()],
+        ['Subfloor Condition', singleChoiceState.subfloor || '—'],
+        ['Project Details', singleChoiceState.projectDetails || '—'],
+        ['Project Description', document.getElementById('projectDescription').value.trim() || '—'],
+        ['Timeline', singleChoiceState.timeline || '—'],
+        ['City', document.getElementById('city').value.trim() || '—'],
+        ['ZIP Code', document.getElementById('zip').value.trim() || '—'],
+        ['On-Site Evaluation', singleChoiceState.visit || '—'],
+        ['Full Name', document.getElementById('fullName').value.trim() || '—'],
+        ['Phone Number', document.getElementById('phone').value.trim() || '—'],
+        ['Email Address', document.getElementById('email').value.trim() || '—'],
+        ['Preferred Contact Method', document.getElementById('contactMethod').value.trim() || '—']
+      ];
+
+      summaryBox.innerHTML = items.map(([label, value]) => `
+        <div class="summary-item">
+          <strong>${label}</strong>
+          <span>${value}</span>
+        </div>
+      `).join('');
+    }
+
+    function buildLeadMessage() {
+      const scope = getScopeValues().join(', ') || 'N/A';
+
+      return `New Flooring Installation Lead
+
+Floor Type: ${singleChoiceState.floorType || 'N/A'}
+Scope of Work: ${scope}
+Materials: ${singleChoiceState.materials || 'N/A'}
+Area Size: ${getAreaSummary()}
+Subfloor Condition: ${singleChoiceState.subfloor || 'N/A'}
+Project Details: ${singleChoiceState.projectDetails || 'N/A'}
+Project Description: ${document.getElementById('projectDescription').value.trim() || 'N/A'}
+Timeline: ${singleChoiceState.timeline || 'N/A'}
+City: ${document.getElementById('city').value.trim() || 'N/A'}
+ZIP Code: ${document.getElementById('zip').value.trim() || 'N/A'}
+On-Site Evaluation: ${singleChoiceState.visit || 'N/A'}
+Full Name: ${document.getElementById('fullName').value.trim() || 'N/A'}
+Phone Number: ${document.getElementById('phone').value.trim() || 'N/A'}
+Email Address: ${document.getElementById('email').value.trim() || 'N/A'}
+Preferred Contact Method: ${document.getElementById('contactMethod').value.trim() || 'N/A'}`;
+    }
+
+    function buildBackupLinks() {
+      const msg = buildLeadMessage();
+      document.getElementById('whatsAppBackup').href = 'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+      document.getElementById('smsBackup').href = 'sms:18135917560?body=' + encodeURIComponent(msg);
+      document.getElementById('emailBackup').href =
+        'mailto:getestimatefast@gmail.com?subject=' +
+        encodeURIComponent('New Flooring Installation Lead') +
+        '&body=' + encodeURIComponent(msg);
+    }
+
+    showStep(0);
+  </script>
+
+  <script>
+    const flooringForm = document.getElementById('flooringForm');
+
+    if (flooringForm) {
+      flooringForm.addEventListener('submit', function () {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
+        });
+      });
+    }
+  </script>
 </body>
 </html>
