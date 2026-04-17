@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drywall Estimate | GetEstimateFast</title>
+  <title>Free Drywall Estimate | GetEstimateFast</title>
+  <meta name="description" content="Get a free drywall estimate in Riverview, FL and surrounding areas. Tell us about your drywall repair or installation project and receive a fast, organized response." />
+
   <style>
     * { box-sizing: border-box; }
 
@@ -374,24 +375,24 @@
   <div class="container">
     <div class="hero">
       <div class="badge">Drywall • Riverview Area</div>
-      <h1>Drywall Estimate</h1>
+      <h1>Get Your Free Drywall Estimate</h1>
       <p class="sub">
-        Answer a few quick questions to request your drywall estimate.
+        Answer a few quick questions to request a drywall repair or installation estimate in Riverview and surrounding areas within 60 miles.
       </p>
 
       <div class="mobile-hide">
         <div class="info-grid">
           <div class="info-card">
             <strong>Fast response</strong>
-            <span>Estimates within 24 hours are available when enough project details are provided.</span>
+            <span>Organized project requests with enough detail may receive a response within 24 hours.</span>
           </div>
           <div class="info-card">
             <strong>Simple process</strong>
-            <span>Submit organized drywall project details through a guided step-by-step form.</span>
+            <span>Submit your drywall project details through a guided step-by-step form.</span>
           </div>
           <div class="info-card">
             <strong>Local service area</strong>
-            <span>Serving Riverview and surrounding areas within 60 miles.</span>
+            <span>Serving Riverview and surrounding communities within 60 miles.</span>
           </div>
         </div>
       </div>
@@ -400,7 +401,7 @@
     <div class="form-shell">
       <div class="progress-wrap">
         <div class="progress-top">
-          <span id="stepLabel">Step 1 of 12</span>
+          <span id="stepLabel">Step 1 of 13</span>
           <span id="stepTitleMini">Project Type</span>
         </div>
         <div class="progress-bar">
@@ -409,7 +410,8 @@
       </div>
 
       <form id="drywallForm" action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="New Drywall Lead" />
+        <input type="hidden" name="_next" value="https://www.getestimatefast.com/thank-you.html">
+        <input type="hidden" name="_subject" id="email-subject">
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="Service" value="Drywall" />
@@ -423,7 +425,6 @@
         <input type="hidden" name="Timeline" id="timelineInput" />
         <input type="hidden" name="On-Site Evaluation" id="visitInput" />
 
-        <!-- STEP 1 -->
         <section class="step active" data-title="Project Type">
           <h2>What type of drywall project do you need?</h2>
           <p class="step-desc">Select the option that best matches your project.</p>
@@ -444,7 +445,6 @@
           </div>
         </section>
 
-        <!-- STEP 2 -->
         <section class="step" data-title="Surface Type">
           <h2>What surfaces are involved?</h2>
           <p class="step-desc">Select all that apply to your drywall project.</p>
@@ -468,7 +468,6 @@
           </div>
         </section>
 
-        <!-- STEP 3 -->
         <section class="step" data-title="Scope of Work">
           <h2>What work is needed?</h2>
           <p class="step-desc">Select all that apply to your drywall project.</p>
@@ -494,7 +493,6 @@
           </div>
         </section>
 
-        <!-- STEP 4 -->
         <section class="step" data-title="Area Size">
           <h2>How large is the drywall project?</h2>
           <p class="step-desc">This helps us review your estimate faster and more accurately.</p>
@@ -510,7 +508,7 @@
           </div>
 
           <div id="areaNoticeBox" class="notice-box hidden">
-            If the project size is not clear, an on-site evaluation may be needed and the 24-hour estimate may not apply.
+            If the project size is not clear, an on-site evaluation may be recommended and the 24-hour estimate may not apply.
           </div>
 
           <div id="areaDetailsBox" class="hidden">
@@ -532,7 +530,6 @@
           </div>
         </section>
 
-        <!-- STEP 5 -->
         <section class="step" data-title="Texture">
           <h2>Will texture be needed?</h2>
           <p class="step-desc">Choose the option that best matches your drywall finish needs.</p>
@@ -554,7 +551,6 @@
           </div>
         </section>
 
-        <!-- STEP 6 -->
         <section class="step" data-title="Finish Stage">
           <h2>What finish stage do you need?</h2>
           <p class="step-desc">Choose the option that best matches your project.</p>
@@ -575,7 +571,6 @@
           </div>
         </section>
 
-        <!-- STEP 7 -->
         <section class="step" data-title="Project Details">
           <h2>What details apply to this drywall project?</h2>
           <p class="step-desc">Choose the option that best matches the project status.</p>
@@ -597,10 +592,9 @@
           </div>
         </section>
 
-        <!-- STEP 8 -->
         <section class="step" data-title="Project Description">
           <h2>Tell us more about your drywall project</h2>
-          <p class="step-desc">The more details you provide, the more accurate your estimate will be.</p>
+          <p class="step-desc">The more details you provide, the more accurate your estimate review can be.</p>
 
           <textarea id="projectDescription" name="Project Description" placeholder="Describe what you want done in your drywall project.
 
@@ -621,7 +615,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 9 -->
         <section class="step" data-title="Timeline">
           <h2>When would you like to start?</h2>
           <p class="step-desc">Choose the timeline that best fits your drywall project.</p>
@@ -642,7 +635,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 10 -->
         <section class="step" data-title="Location">
           <h2>Where is the project located?</h2>
           <p class="step-desc">Please provide the city and ZIP code of the property.</p>
@@ -660,12 +652,11 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 11 -->
         <section class="step" data-title="On-Site Evaluation">
           <h2>Do you think an on-site evaluation may be needed?</h2>
 
           <div class="notice-box">
-            Some drywall projects may require an in-person evaluation. If a site visit is needed, a $100 service fee may apply. This fee will be credited toward your project if you move forward with the team.
+            Some drywall projects may require an in-person evaluation before final pricing. If a site visit is necessary, an evaluation fee may apply depending on the location and project complexity. Any approved evaluation fee may be credited toward the project if you move forward.
           </div>
 
           <div class="option-grid" data-group="visit">
@@ -681,7 +672,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 12 -->
         <section class="step" data-title="Photos & Contact">
           <h2>Add photos and your contact information</h2>
           <p class="step-desc">Photos are optional, but they help us review your drywall project more accurately.</p>
@@ -693,7 +683,7 @@ Example:
 
           <div class="field-grid">
             <input type="text" id="fullName" name="Full Name" placeholder="Full Name" />
-            <input type="text" id="phone" name="Phone Number" placeholder="Phone Number" />
+            <input type="text" id="phone" name="Phone Number" placeholder="Phone Number (example: 813-555-1234)" />
             <input type="email" id="email" name="Email Address" placeholder="Email Address" />
             <select id="contactMethod" name="Preferred Contact Method">
               <option value="">Preferred contact method</option>
@@ -712,7 +702,6 @@ Example:
           </div>
         </section>
 
-        <!-- REVIEW STEP -->
         <section class="step" data-title="Review & Submit">
           <h2>Review your request</h2>
           <p class="step-desc">Please review your drywall project details before submitting.</p>
@@ -1021,8 +1010,12 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
 
     function buildBackupLinks() {
       const msg = buildLeadMessage();
-      document.getElementById('whatsAppBackup').href = 'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
-      document.getElementById('smsBackup').href = 'sms:18135917560?body=' + encodeURIComponent(msg);
+      document.getElementById('whatsAppBackup').href =
+        'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+
+      document.getElementById('smsBackup').href =
+        'sms:18135917560?body=' + encodeURIComponent(msg);
+
       document.getElementById('emailBackup').href =
         'mailto:getestimatefast@gmail.com?subject=' +
         encodeURIComponent('New Drywall Lead') +
@@ -1037,6 +1030,16 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
 
     if (drywallForm) {
       drywallForm.addEventListener('submit', function () {
+        const fullName = document.getElementById('fullName')?.value.trim() || 'New Lead';
+        const service = 'Drywall';
+        const zip = document.getElementById('zip')?.value.trim() || 'No ZIP';
+        const timeline = singleChoiceState.timeline || 'No Timeline';
+
+        const subjectField = document.getElementById('email-subject');
+        if (subjectField) {
+          subjectField.value = `${fullName} - ${service} - ${zip} - ${timeline}`;
+        }
+
         gtag('event', 'conversion', {
           'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
         });
