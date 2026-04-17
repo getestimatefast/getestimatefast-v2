@@ -682,10 +682,18 @@ Example:
           <h2>Would you like to add photos of the project area?</h2>
           <p class="step-desc">Photos are optional, but they help us review your painting project more accurately.</p>
 
-          <input type="file" name="Project Photos" multiple accept="image/*" />
-          <div class="hint">
-            Additional project photos can also be shared later using your preferred contact method.
-          </div>
+    <label>Upload Project Photos (optional)</label>
+
+<input type="file" name="Photo 1" accept="image/*" />
+<input type="file" name="Photo 2" accept="image/*" />
+<input type="file" name="Photo 3" accept="image/*" />
+<input type="file" name="Photo 4" accept="image/*" />
+<input type="file" name="Photo 5" accept="image/*" />
+
+<div class="hint">
+  You may upload up to 5 photos. Max total size: 10MB.Additional project photos can also be shared later using your preferred contact method.
+</div>
+        
 
           <div class="nav-row">
             <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
