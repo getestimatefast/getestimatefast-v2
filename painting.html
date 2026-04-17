@@ -1,1 +1,1005 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18090208680');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painting Estimate | GetEstimateFast</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 22px 18px 60px;
+    }
+
+    .hero {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f7ec;
+      color: #18794e;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.08;
+      margin: 0 0 10px;
+    }
+
+    .sub {
+      font-size: 17px;
+      color: #4b5563;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .mobile-hide {
+      display: block;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .info-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .info-card span {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .form-shell {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    }
+
+    .progress-wrap {
+      margin-bottom: 22px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #4b5563;
+      font-weight: 700;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 8%;
+      background: #111827;
+      transition: width 0.25s ease;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin: 0 0 10px;
+      line-height: 1.15;
+    }
+
+    .step-desc {
+      color: #6b7280;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+
+    .option-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .option-btn,
+    .nav-btn,
+    .submit-btn,
+    .contact-link {
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .option-btn {
+      width: 100%;
+      padding: 18px 16px;
+      text-align: left;
+      background: #111827;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .option-btn:hover,
+    .nav-btn:hover,
+    .submit-btn:hover,
+    .contact-link:hover {
+      opacity: 0.95;
+    }
+
+    .option-btn.selected {
+      background: #18794e;
+    }
+
+    .checkbox-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-item input {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .field-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .two-col {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 16px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .notice-box {
+      background: #fff8e7;
+      border: 1px solid #f3d27a;
+      padding: 16px;
+      border-radius: 14px;
+      color: #5c4500;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .soft-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 16px;
+      border-radius: 14px;
+      margin-top: 14px;
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    .nav-btn,
+    .submit-btn {
+      padding: 16px 18px;
+      width: 100%;
+      background: #111827;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .nav-btn.secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .summary {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+
+    .summary-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .summary-item span {
+      font-size: 15px;
+      color: #111827;
+      line-height: 1.5;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 13px 16px;
+      font-weight: 700;
+    }
+
+    .contact-link.alt {
+      background: #25d366;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    .error {
+      color: #b91c1c;
+      font-size: 14px;
+      margin-top: 12px;
+      display: none;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-hide {
+        display: none;
+      }
+
+      h1 { font-size: 30px; }
+      h2 { font-size: 24px; }
+
+      .form-shell, .hero { padding: 20px; }
+      .two-col, .three-col, .info-grid { grid-template-columns: 1fr; }
+      .nav-row { flex-direction: column; }
+
+      .container {
+        padding-top: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="badge">Painting • Riverview Area</div>
+      <h1>Painting Estimate</h1>
+      <p class="sub">
+        Answer a few quick questions to request your painting estimate.
+      </p>
+
+      <div class="mobile-hide">
+        <div class="info-grid">
+          <div class="info-card">
+            <strong>Fast response</strong>
+            <span>Estimates within 24 hours are available when enough project details are provided.</span>
+          </div>
+          <div class="info-card">
+            <strong>Simple process</strong>
+            <span>Submit organized painting project details through a guided step-by-step form.</span>
+          </div>
+          <div class="info-card">
+            <strong>Local service area</strong>
+            <span>Serving Riverview and surrounding areas within 60 miles.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-shell">
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span id="stepLabel">Step 1 of 12</span>
+          <span id="stepTitleMini">Project Type</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <form id="paintingForm" action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="New Painting Lead" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="Service" value="Painting" />
+        <input type="hidden" name="Project Type" id="projectTypeInput" />
+        <input type="hidden" name="Painting Area" id="paintingAreaInput" />
+        <input type="hidden" name="Surface Condition" id="surfaceConditionInput" />
+        <input type="hidden" name="Paint Status" id="paintStatusInput" />
+        <input type="hidden" name="Area Size" id="areaSizeInput" />
+        <input type="hidden" name="Project Details" id="projectDetailsInput" />
+        <input type="hidden" name="Timeline" id="timelineInput" />
+        <input type="hidden" name="On-Site Evaluation" id="visitInput" />
+
+        <!-- STEP 1 -->
+        <section class="step active" data-title="Project Type">
+          <h2>What type of painting project do you need?</h2>
+          <p class="step-desc">Select the option that best matches your project.</p>
+
+          <div class="option-grid" data-group="projectType">
+            <button type="button" class="option-btn" data-value="Interior painting">Interior painting</button>
+            <button type="button" class="option-btn" data-value="Exterior painting">Exterior painting</button>
+            <button type="button" class="option-btn" data-value="Interior and exterior painting">Interior and exterior painting</button>
+            <button type="button" class="option-btn" data-value="Single room painting">Single room painting</button>
+            <button type="button" class="option-btn" data-value="Whole house painting">Whole house painting</button>
+            <button type="button" class="option-btn" data-value="Commercial painting">Commercial painting</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="step" data-title="Painting Area">
+          <h2>What areas need to be painted?</h2>
+          <p class="step-desc">Select all that apply to your project.</p>
+
+          <div class="checkbox-list">
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Walls">Walls</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Ceilings">Ceilings</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Trim">Trim</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Doors">Doors</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Baseboards">Baseboards</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Cabinets">Cabinets</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Garage">Garage</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Fence">Fence</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Deck or patio">Deck or patio</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Exterior siding">Exterior siding</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Shutters">Shutters</label>
+            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Other surfaces">Other surfaces</label>
+          </div>
+
+          <div class="error">Please select at least one area.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="step" data-title="Surface Condition">
+          <h2>What is the current surface condition?</h2>
+          <p class="step-desc">Choose the option that best describes the surfaces.</p>
+
+          <div class="option-grid" data-group="surfaceCondition">
+            <button type="button" class="option-btn" data-value="Good condition">Good condition</button>
+            <button type="button" class="option-btn" data-value="Minor repairs needed">Minor repairs needed</button>
+            <button type="button" class="option-btn" data-value="Cracks or holes need patching">Cracks or holes need patching</button>
+            <button type="button" class="option-btn" data-value="Water stains or damage">Water stains or damage</button>
+            <button type="button" class="option-btn" data-value="Peeling or flaking paint">Peeling or flaking paint</button>
+            <button type="button" class="option-btn" data-value="Not sure">Not sure</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="step" data-title="Paint Status">
+          <h2>How will paint and materials be handled?</h2>
+          <p class="step-desc">Choose the option that best matches your project.</p>
+
+          <div class="option-grid" data-group="paintStatus">
+            <button type="button" class="option-btn" data-value="I already have the paint">I already have the paint</button>
+            <button type="button" class="option-btn" data-value="I need help choosing paint">I need help choosing paint</button>
+            <button type="button" class="option-btn" data-value="I want help purchasing paint and materials">I want help purchasing paint and materials</button>
+            <button type="button" class="option-btn" data-value="Labor only">Labor only</button>
+            <button type="button" class="option-btn" data-value="Labor plus materials">Labor plus materials</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 5 -->
+        <section class="step" data-title="Area Size">
+          <h2>How large is the painting project?</h2>
+          <p class="step-desc">This helps us review your estimate faster and more accurately.</p>
+
+          <div class="option-grid" data-group="areaSize">
+            <button type="button" class="option-btn" data-value="Small project">Small project</button>
+            <button type="button" class="option-btn" data-value="One room">One room</button>
+            <button type="button" class="option-btn" data-value="Multiple rooms">Multiple rooms</button>
+            <button type="button" class="option-btn" data-value="Whole house">Whole house</button>
+            <button type="button" class="option-btn" data-value="Exterior only">Exterior only</button>
+            <button type="button" class="option-btn" data-value="I want to enter exact details">I want to enter exact details</button>
+            <button type="button" class="option-btn" data-value="Not sure">Not sure</button>
+          </div>
+
+          <div id="areaNoticeBox" class="notice-box hidden">
+            If the project size is not clear, an on-site evaluation may be needed and the 24-hour estimate may not apply.
+          </div>
+
+          <div id="areaDetailsBox" class="hidden">
+            <div class="soft-box">
+              <p class="step-desc" style="margin-bottom:14px;">Enter the project details below.</p>
+              <div class="field-grid three-col">
+                <input type="text" id="roomsCount" name="Number of Rooms" placeholder="Number of rooms" />
+                <input type="text" id="wallHeight" name="Approximate Wall Height (feet)" placeholder="Wall height (feet)" />
+                <input type="text" id="sqftApprox" name="Approximate Square Footage" placeholder="Approximate square footage" />
+              </div>
+            </div>
+          </div>
+
+          <div class="error">Please complete the area size step to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 6 -->
+        <section class="step" data-title="Project Details">
+          <h2>What details apply to this painting project?</h2>
+          <p class="step-desc">Choose the option that best matches the project status.</p>
+
+          <div class="option-grid" data-group="projectDetails">
+            <button type="button" class="option-btn" data-value="Occupied home">Occupied home</button>
+            <button type="button" class="option-btn" data-value="Vacant property">Vacant property</button>
+            <button type="button" class="option-btn" data-value="Furniture may need to be moved">Furniture may need to be moved</button>
+            <button type="button" class="option-btn" data-value="Color change only">Color change only</button>
+            <button type="button" class="option-btn" data-value="Prep work is important">Prep work is important</button>
+            <button type="button" class="option-btn" data-value="Needs patching and prep before painting">Needs patching and prep before painting</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 7 -->
+        <section class="step" data-title="Project Description">
+          <h2>Tell us more about your painting project</h2>
+          <p class="step-desc">The more details you provide, the more accurate your estimate will be.</p>
+
+          <textarea id="projectDescription" name="Project Description" placeholder="Describe what you want done in your painting project.
+
+Example:
+- Paint living room, hallway, and kitchen
+- Repair nail holes and minor wall damage
+- Repaint exterior trim and front door
+- Change dark walls to light color
+- Paint ceilings and baseboards"></textarea>
+
+          <div class="hint">You can include colors, rooms, current condition, prep needs, or any special concerns.</div>
+
+          <div class="error">Please add a short project description to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 8 -->
+        <section class="step" data-title="Timeline">
+          <h2>When would you like to start?</h2>
+          <p class="step-desc">Choose the timeline that best fits your painting project.</p>
+
+          <div class="option-grid" data-group="timeline">
+            <button type="button" class="option-btn" data-value="As soon as possible">As soon as possible</button>
+            <button type="button" class="option-btn" data-value="Within 30 days">Within 30 days</button>
+            <button type="button" class="option-btn" data-value="Within 60 days">Within 60 days</button>
+            <button type="button" class="option-btn" data-value="Within 90 days">Within 90 days</button>
+            <button type="button" class="option-btn" data-value="Just planning for now">Just planning for now</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 9 -->
+        <section class="step" data-title="Location">
+          <h2>Where is the project located?</h2>
+          <p class="step-desc">Please provide the city and ZIP code of the property.</p>
+
+          <div class="field-grid two-col">
+            <input type="text" id="city" name="City" placeholder="City" />
+            <input type="text" id="zip" name="ZIP Code" placeholder="ZIP Code" />
+          </div>
+
+          <div class="error">Please enter city and ZIP code.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 10 -->
+        <section class="step" data-title="On-Site Evaluation">
+          <h2>Do you think an on-site evaluation may be needed?</h2>
+
+          <div class="notice-box">
+            Some painting projects may require an in-person evaluation. If a site visit is needed, a $100 service fee may apply. This fee will be credited toward your project if you move forward with the team.
+          </div>
+
+          <div class="option-grid" data-group="visit">
+            <button type="button" class="option-btn" data-value="No, I do not need a visit">No, I do not need a visit</button>
+            <button type="button" class="option-btn" data-value="Yes, I may need an on-site evaluation">Yes, I may need an on-site evaluation</button>
+          </div>
+
+          <div class="error">Please select one option to continue.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 11 -->
+        <section class="step" data-title="Photos & Contact">
+          <h2>Add photos and your contact information</h2>
+          <p class="step-desc">Photos are optional, but they help us review your painting project more accurately.</p>
+
+          <input type="file" name="Project Photos" multiple accept="image/*" />
+          <div class="hint" style="margin-bottom:16px;">
+            Additional project photos can also be shared later using your preferred contact method.
+          </div>
+
+          <div class="field-grid">
+            <input type="text" id="fullName" name="Full Name" placeholder="Full Name" />
+            <input type="text" id="phone" name="Phone Number" placeholder="Phone Number" />
+            <input type="email" id="email" name="Email Address" placeholder="Email Address" />
+            <select id="contactMethod" name="Preferred Contact Method">
+              <option value="">Preferred contact method</option>
+              <option>Phone call</option>
+              <option>Text message</option>
+              <option>WhatsApp</option>
+              <option>Email</option>
+            </select>
+          </div>
+
+          <div class="error">Please complete name, phone, email, and preferred contact method.</div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 12 -->
+        <section class="step" data-title="Review & Submit">
+          <h2>Review your request</h2>
+          <p class="step-desc">Please review your painting project details before submitting.</p>
+
+          <div class="summary" id="summaryBox"></div>
+
+          <div class="contact-links">
+            <a class="contact-link" id="smsBackup" href="#">Send by text instead</a>
+            <a class="contact-link" id="emailBackup" href="#">Send by email instead</a>
+            <a class="contact-link alt" id="whatsAppBackup" href="#" target="_blank">Send by WhatsApp instead</a>
+          </div>
+
+          <div class="footer-note">
+            GetEstimateFast is a lead generation platform that connects customers with construction professionals. Depending on the project, services may be performed by our team or by independent contractors.
+          </div>
+
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="submit" class="submit-btn">Request My Estimate</button>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const steps = Array.from(document.querySelectorAll('.step'));
+    let currentStep = 0;
+
+    const stepLabel = document.getElementById('stepLabel');
+    const stepTitleMini = document.getElementById('stepTitleMini');
+    const progressFill = document.getElementById('progressFill');
+
+    const singleChoiceState = {
+      projectType: '',
+      surfaceCondition: '',
+      paintStatus: '',
+      areaSize: '',
+      projectDetails: '',
+      timeline: '',
+      visit: ''
+    };
+
+    document.querySelectorAll('[data-group]').forEach(group => {
+      const groupName = group.getAttribute('data-group');
+      group.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          singleChoiceState[groupName] = btn.dataset.value;
+
+          if (groupName === 'projectType') document.getElementById('projectTypeInput').value = btn.dataset.value;
+          if (groupName === 'surfaceCondition') document.getElementById('surfaceConditionInput').value = btn.dataset.value;
+          if (groupName === 'paintStatus') document.getElementById('paintStatusInput').value = btn.dataset.value;
+          if (groupName === 'areaSize') {
+            document.getElementById('areaSizeInput').value = btn.dataset.value;
+            handleAreaSize();
+          }
+          if (groupName === 'projectDetails') document.getElementById('projectDetailsInput').value = btn.dataset.value;
+          if (groupName === 'timeline') document.getElementById('timelineInput').value = btn.dataset.value;
+          if (groupName === 'visit') document.getElementById('visitInput').value = btn.dataset.value;
+
+          hideError(currentStep);
+        });
+      });
+    });
+
+    function handleAreaSize() {
+      const noticeBox = document.getElementById('areaNoticeBox');
+      const detailsBox = document.getElementById('areaDetailsBox');
+
+      if (singleChoiceState.areaSize === 'Not sure') {
+        noticeBox.classList.remove('hidden');
+        detailsBox.classList.add('hidden');
+        document.getElementById('roomsCount').value = '';
+        document.getElementById('wallHeight').value = '';
+        document.getElementById('sqftApprox').value = '';
+      } else if (singleChoiceState.areaSize === 'I want to enter exact details') {
+        noticeBox.classList.add('hidden');
+        detailsBox.classList.remove('hidden');
+      } else if (singleChoiceState.areaSize) {
+        noticeBox.classList.add('hidden');
+        detailsBox.classList.add('hidden');
+        document.getElementById('roomsCount').value = '';
+        document.getElementById('wallHeight').value = '';
+        document.getElementById('sqftApprox').value = '';
+      } else {
+        noticeBox.classList.add('hidden');
+        detailsBox.classList.add('hidden');
+      }
+    }
+
+    function showStep(index) {
+      steps.forEach((step, i) => step.classList.toggle('active', i === index));
+      currentStep = index;
+
+      const title = steps[index].dataset.title || '';
+      stepLabel.textContent = `Step ${index + 1} of ${steps.length}`;
+      stepTitleMini.textContent = title;
+      progressFill.style.width = `${((index + 1) / steps.length) * 100}%`;
+
+      if (index === steps.length - 1) {
+        buildSummary();
+        buildBackupLinks();
+      }
+    }
+
+    function getErrorBox(index) {
+      return steps[index].querySelector('.error');
+    }
+
+    function showError(index, message) {
+      const box = getErrorBox(index);
+      if (!box) return;
+      box.textContent = message;
+      box.style.display = 'block';
+    }
+
+    function hideError(index) {
+      const box = getErrorBox(index);
+      if (!box) return;
+      box.style.display = 'none';
+    }
+
+    function validateStep(index) {
+      hideError(index);
+
+      if (index === 0 && !singleChoiceState.projectType) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 1) {
+        const checked = steps[index].querySelectorAll('input[type="checkbox"]:checked');
+        if (checked.length === 0) {
+          showError(index, 'Please select at least one area.');
+          return false;
+        }
+      }
+
+      if (index === 2 && !singleChoiceState.surfaceCondition) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 3 && !singleChoiceState.paintStatus) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 4) {
+        if (!singleChoiceState.areaSize) {
+          showError(index, 'Please select one option to continue.');
+          return false;
+        }
+
+        if (singleChoiceState.areaSize === 'I want to enter exact details') {
+          const rooms = document.getElementById('roomsCount').value.trim();
+          const height = document.getElementById('wallHeight').value.trim();
+          const sqft = document.getElementById('sqftApprox').value.trim();
+          if (!rooms || !height || !sqft) {
+            showError(index, 'Please enter number of rooms, wall height, and approximate square footage.');
+            return false;
+          }
+        }
+      }
+
+      if (index === 5 && !singleChoiceState.projectDetails) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 6) {
+        const desc = document.getElementById('projectDescription').value.trim();
+        if (desc.length < 10) {
+          showError(index, 'Please add a short project description to continue.');
+          return false;
+        }
+      }
+
+      if (index === 7 && !singleChoiceState.timeline) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 8) {
+        const city = document.getElementById('city').value.trim();
+        const zip = document.getElementById('zip').value.trim();
+        if (!city || !zip) {
+          showError(index, 'Please enter city and ZIP code.');
+          return false;
+        }
+      }
+
+      if (index === 9 && !singleChoiceState.visit) {
+        showError(index, 'Please select one option to continue.');
+        return false;
+      }
+
+      if (index === 10) {
+        const name = document.getElementById('fullName').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const method = document.getElementById('contactMethod').value.trim();
+        if (!name || !phone || !email || !method) {
+          showError(index, 'Please complete name, phone, email, and preferred contact method.');
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function nextStep() {
+      if (!validateStep(currentStep)) return;
+      if (currentStep < steps.length - 1) showStep(currentStep + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function prevStep() {
+      if (currentStep > 0) showStep(currentStep - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function getPaintingAreas() {
+      return Array.from(document.querySelectorAll('input[name="Painting Areas[]"]:checked')).map(i => i.value);
+    }
+
+    function getAreaSummary() {
+      if (singleChoiceState.areaSize === 'I want to enter exact details') {
+        return `Exact details: ${document.getElementById('roomsCount').value || 'N/A'} rooms • ${document.getElementById('wallHeight').value || 'N/A'} ft wall height • ${document.getElementById('sqftApprox').value || 'N/A'} sqft`;
+      }
+      return singleChoiceState.areaSize || '—';
+    }
+
+    function buildSummary() {
+      const summaryBox = document.getElementById('summaryBox');
+      const areas = getPaintingAreas();
+
+      const items = [
+        ['Project Type', singleChoiceState.projectType || '—'],
+        ['Painting Areas', areas.length ? areas.join(', ') : '—'],
+        ['Surface Condition', singleChoiceState.surfaceCondition || '—'],
+        ['Paint Status', singleChoiceState.paintStatus || '—'],
+        ['Area Size', getAreaSummary()],
+        ['Project Details', singleChoiceState.projectDetails || '—'],
+        ['Project Description', document.getElementById('projectDescription').value.trim() || '—'],
+        ['Timeline', singleChoiceState.timeline || '—'],
+        ['City', document.getElementById('city').value.trim() || '—'],
+        ['ZIP Code', document.getElementById('zip').value.trim() || '—'],
+        ['On-Site Evaluation', singleChoiceState.visit || '—'],
+        ['Full Name', document.getElementById('fullName').value.trim() || '—'],
+        ['Phone Number', document.getElementById('phone').value.trim() || '—'],
+        ['Email Address', document.getElementById('email').value.trim() || '—'],
+        ['Preferred Contact Method', document.getElementById('contactMethod').value.trim() || '—']
+      ];
+
+      summaryBox.innerHTML = items.map(([label, value]) => `
+        <div class="summary-item">
+          <strong>${label}</strong>
+          <span>${value}</span>
+        </div>
+      `).join('');
+    }
+
+    function buildLeadMessage() {
+      const areas = getPaintingAreas().join(', ') || 'N/A';
+
+      return `New Painting Lead
+
+Project Type: ${singleChoiceState.projectType || 'N/A'}
+Painting Areas: ${areas}
+Surface Condition: ${singleChoiceState.surfaceCondition || 'N/A'}
+Paint Status: ${singleChoiceState.paintStatus || 'N/A'}
+Area Size: ${getAreaSummary()}
+Project Details: ${singleChoiceState.projectDetails || 'N/A'}
+Project Description: ${document.getElementById('projectDescription').value.trim() || 'N/A'}
+Timeline: ${singleChoiceState.timeline || 'N/A'}
+City: ${document.getElementById('city').value.trim() || 'N/A'}
+ZIP Code: ${document.getElementById('zip').value.trim() || 'N/A'}
+On-Site Evaluation: ${singleChoiceState.visit || 'N/A'}
+Full Name: ${document.getElementById('fullName').value.trim() || 'N/A'}
+Phone Number: ${document.getElementById('phone').value.trim() || 'N/A'}
+Email Address: ${document.getElementById('email').value.trim() || 'N/A'}
+Preferred Contact Method: ${document.getElementById('contactMethod').value.trim() || 'N/A'}`;
+    }
+
+    function buildBackupLinks() {
+      const msg = buildLeadMessage();
+      document.getElementById('whatsAppBackup').href = 'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+      document.getElementById('smsBackup').href = 'sms:18135917560?body=' + encodeURIComponent(msg);
+      document.getElementById('emailBackup').href =
+        'mailto:getestimatefast@gmail.com?subject=' +
+        encodeURIComponent('New Painting Lead') +
+        '&body=' + encodeURIComponent(msg);
+    }
+
+    showStep(0);
+  </script>
+
+  <script>
+    const paintingForm = document.getElementById('paintingForm');
+
+    if (paintingForm) {
+      paintingForm.addEventListener('submit', function () {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
+        });
+      });
+    }
+  </script>
+</body>
+</html>
