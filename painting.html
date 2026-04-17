@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Painting Estimate | GetEstimateFast</title>
+  <title>Free Painting Estimate | GetEstimateFast</title>
+  <meta name="description" content="Get a free painting estimate in Riverview, FL and surrounding areas. Tell us about your interior or exterior painting project and receive a fast, organized response." />
+
   <style>
     * { box-sizing: border-box; }
 
@@ -313,6 +314,7 @@
       font-size: 15px;
       color: #111827;
       line-height: 1.5;
+      word-break: break-word;
     }
 
     .contact-links {
@@ -374,24 +376,24 @@
   <div class="container">
     <div class="hero">
       <div class="badge">Painting • Riverview Area</div>
-      <h1>Painting Estimate</h1>
+      <h1>Get Your Free Painting Estimate</h1>
       <p class="sub">
-        Answer a few quick questions to request your painting estimate.
+        Answer a few quick questions to request a painting estimate in Riverview and surrounding areas within 60 miles.
       </p>
 
       <div class="mobile-hide">
         <div class="info-grid">
           <div class="info-card">
             <strong>Fast response</strong>
-            <span>Estimates within 24 hours are available when enough project details are provided.</span>
+            <span>Organized painting requests with enough detail may receive a response within 24 hours.</span>
           </div>
           <div class="info-card">
             <strong>Simple process</strong>
-            <span>Submit organized painting project details through a guided step-by-step form.</span>
+            <span>Submit your painting project details through a guided step-by-step form.</span>
           </div>
           <div class="info-card">
             <strong>Local service area</strong>
-            <span>Serving Riverview and surrounding areas within 60 miles.</span>
+            <span>Serving Riverview and surrounding communities within 60 miles.</span>
           </div>
         </div>
       </div>
@@ -408,16 +410,19 @@
         </div>
       </div>
 
-      <form id="paintingForm" action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="New Painting Lead" />
+      <form id="lead-form" action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_next" value="https://www.getestimatefast.com/thank-you.html">
+        <input type="hidden" name="_subject" id="email-subject">
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="Service" value="Painting" />
         <input type="hidden" name="Project Type" id="projectTypeInput" />
-        <input type="hidden" name="Painting Area" id="paintingAreaInput" />
+        <input type="hidden" name="Paint Scope" id="paintScopeInput" />
         <input type="hidden" name="Surface Condition" id="surfaceConditionInput" />
-        <input type="hidden" name="Paint Status" id="paintStatusInput" />
-        <input type="hidden" name="Area Size" id="areaSizeInput" />
+        <input type="hidden" name="Paint & Materials" id="paintStatusInput" />
+        <input type="hidden" name="Knows Measurements" id="knowsMeasurementsInput" />
+        <input type="hidden" name="Measurement Method" id="measurementMethodInput" />
+        <input type="hidden" name="Standard Size" id="standardSizeInput" />
         <input type="hidden" name="Project Details" id="projectDetailsInput" />
         <input type="hidden" name="Timeline" id="timelineInput" />
         <input type="hidden" name="On-Site Evaluation" id="visitInput" />
@@ -425,7 +430,7 @@
         <!-- STEP 1 -->
         <section class="step active" data-title="Project Type">
           <h2>What type of painting project do you need?</h2>
-          <p class="step-desc">Select the option that best matches your project.</p>
+          <p class="step-desc">Select the option that best matches your painting project.</p>
 
           <div class="option-grid" data-group="projectType">
             <button type="button" class="option-btn" data-value="Interior painting">Interior painting</button>
@@ -444,26 +449,26 @@
         </section>
 
         <!-- STEP 2 -->
-        <section class="step" data-title="Painting Area">
+        <section class="step" data-title="Scope of Work">
           <h2>What areas need to be painted?</h2>
           <p class="step-desc">Select all that apply to your project.</p>
 
           <div class="checkbox-list">
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Walls">Walls</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Ceilings">Ceilings</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Trim">Trim</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Doors">Doors</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Baseboards">Baseboards</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Cabinets">Cabinets</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Garage">Garage</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Fence">Fence</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Deck or patio">Deck or patio</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Exterior siding">Exterior siding</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Shutters">Shutters</label>
-            <label class="checkbox-item"><input type="checkbox" name="Painting Areas[]" value="Other surfaces">Other surfaces</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Walls">Walls</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Ceilings">Ceilings</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Trim">Trim</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Doors">Doors</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Baseboards">Baseboards</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Cabinets">Cabinets</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Garage">Garage</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Fence">Fence</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Deck or patio">Deck or patio</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Exterior siding">Exterior siding</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Shutters">Shutters</label>
+            <label class="checkbox-item"><input type="checkbox" name="Scope of Work[]" value="Other surfaces">Other surfaces</label>
           </div>
 
-          <div class="error">Please select at least one area.</div>
+          <div class="error">Please select at least one scope item.</div>
 
           <div class="nav-row">
             <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
@@ -494,7 +499,7 @@
         </section>
 
         <!-- STEP 4 -->
-        <section class="step" data-title="Paint Status">
+        <section class="step" data-title="Paint & Materials">
           <h2>How will paint and materials be handled?</h2>
           <p class="step-desc">Choose the option that best matches your project.</p>
 
@@ -515,36 +520,50 @@
         </section>
 
         <!-- STEP 5 -->
-        <section class="step" data-title="Area Size">
-          <h2>How large is the painting project?</h2>
-          <p class="step-desc">This helps us review your estimate faster and more accurately.</p>
+        <section class="step" data-title="Measurements">
+          <h2>Do you know the approximate project size?</h2>
+          <p class="step-desc">This helps us review whether your estimate may be evaluated more accurately within 24 hours.</p>
 
-          <div class="option-grid" data-group="areaSize">
-            <button type="button" class="option-btn" data-value="Small project">Small project</button>
-            <button type="button" class="option-btn" data-value="One room">One room</button>
-            <button type="button" class="option-btn" data-value="Multiple rooms">Multiple rooms</button>
-            <button type="button" class="option-btn" data-value="Whole house">Whole house</button>
-            <button type="button" class="option-btn" data-value="Exterior only">Exterior only</button>
-            <button type="button" class="option-btn" data-value="I want to enter exact details">I want to enter exact details</button>
-            <button type="button" class="option-btn" data-value="Not sure">Not sure</button>
+          <div class="option-grid" data-group="knowsMeasurements">
+            <button type="button" class="option-btn" data-value="Yes, I know the project size">Yes, I know the project size</button>
+            <button type="button" class="option-btn" data-value="No, I do not know the project size">No, I do not know the project size</button>
           </div>
 
-          <div id="areaNoticeBox" class="notice-box hidden">
-            If the project size is not clear, an on-site evaluation may be needed and the 24-hour estimate may not apply.
+          <div id="measurementNoBox" class="notice-box hidden">
+            If the project size is not available, an on-site evaluation may be recommended and the 24-hour estimate may not apply.
           </div>
 
-          <div id="areaDetailsBox" class="hidden">
+          <div id="measurementYesBox" class="hidden">
             <div class="soft-box">
-              <p class="step-desc" style="margin-bottom:14px;">Enter the project details below.</p>
-              <div class="field-grid three-col">
-                <input type="text" id="roomsCount" name="Number of Rooms" placeholder="Number of rooms" />
-                <input type="text" id="wallHeight" name="Approximate Wall Height (feet)" placeholder="Wall height (feet)" />
-                <input type="text" id="sqftApprox" name="Approximate Square Footage" placeholder="Approximate square footage" />
+              <p class="step-desc" style="margin-bottom:14px;">How would you like to provide the project size?</p>
+
+              <div class="option-grid" data-group="measurementMethod">
+                <button type="button" class="option-btn" data-value="Select a standard project size">Select a standard project size</button>
+                <button type="button" class="option-btn" data-value="Enter custom measurements">Enter custom measurements</button>
+              </div>
+
+              <div id="standardSizeBox" class="hidden" style="margin-top:16px;">
+                <select id="standardProjectSize">
+                  <option value="">Select a standard project size</option>
+                  <option>Small project — one room or minor area</option>
+                  <option>Medium project — multiple rooms</option>
+                  <option>Large project — whole house interior</option>
+                  <option>Exterior project — standard single-family home</option>
+                  <option>Different size / not listed</option>
+                </select>
+              </div>
+
+              <div id="customSizeBox" class="hidden" style="margin-top:16px;">
+                <div class="field-grid three-col">
+                  <input type="text" id="roomsCount" name="Number of Rooms" placeholder="Number of rooms" inputmode="numeric" />
+                  <input type="text" id="wallHeight" name="Approximate Wall Height (feet)" placeholder="Wall height (feet)" inputmode="decimal" />
+                  <input type="text" id="sqftApprox" name="Approximate Square Footage" placeholder="Approximate square footage" inputmode="numeric" />
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="error">Please complete the area size step to continue.</div>
+          <div class="error">Please complete the measurement step to continue.</div>
 
           <div class="nav-row">
             <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
@@ -555,7 +574,7 @@
         <!-- STEP 6 -->
         <section class="step" data-title="Project Details">
           <h2>What details apply to this painting project?</h2>
-          <p class="step-desc">Choose the option that best matches the project status.</p>
+          <p class="step-desc">Choose the option that best describes the project status.</p>
 
           <div class="option-grid" data-group="projectDetails">
             <button type="button" class="option-btn" data-value="Occupied home">Occupied home</button>
@@ -577,7 +596,7 @@
         <!-- STEP 7 -->
         <section class="step" data-title="Project Description">
           <h2>Tell us more about your painting project</h2>
-          <p class="step-desc">The more details you provide, the more accurate your estimate will be.</p>
+          <p class="step-desc">The more details you provide, the more accurate your estimate review can be.</p>
 
           <textarea id="projectDescription" name="Project Description" placeholder="Describe what you want done in your painting project.
 
@@ -601,7 +620,7 @@ Example:
         <!-- STEP 8 -->
         <section class="step" data-title="Timeline">
           <h2>When would you like to start?</h2>
-          <p class="step-desc">Choose the timeline that best fits your painting project.</p>
+          <p class="step-desc">Choose the timeline that best fits your project plan.</p>
 
           <div class="option-grid" data-group="timeline">
             <button type="button" class="option-btn" data-value="As soon as possible">As soon as possible</button>
@@ -625,8 +644,8 @@ Example:
           <p class="step-desc">Please provide the city and ZIP code of the property.</p>
 
           <div class="field-grid two-col">
-            <input type="text" id="city" name="City" placeholder="City" />
-            <input type="text" id="zip" name="ZIP Code" placeholder="ZIP Code" />
+            <input type="text" id="city" name="City" placeholder="City" autocomplete="address-level2" />
+            <input type="text" id="zip" name="ZIP Code" placeholder="ZIP Code" autocomplete="postal-code" inputmode="numeric" />
           </div>
 
           <div class="error">Please enter city and ZIP code.</div>
@@ -642,7 +661,7 @@ Example:
           <h2>Do you think an on-site evaluation may be needed?</h2>
 
           <div class="notice-box">
-            Some painting projects may require an in-person evaluation. If a site visit is needed, a $100 service fee may apply. This fee will be credited toward your project if you move forward with the team.
+            Some painting projects may require an in-person evaluation before final pricing. If a site visit is necessary, an evaluation fee may apply depending on the location and project complexity. Any approved evaluation fee may be credited toward the project if you move forward.
           </div>
 
           <div class="option-grid" data-group="visit">
@@ -659,19 +678,30 @@ Example:
         </section>
 
         <!-- STEP 11 -->
-        <section class="step" data-title="Photos & Contact">
-          <h2>Add photos and your contact information</h2>
+        <section class="step" data-title="Photos">
+          <h2>Would you like to add photos of the project area?</h2>
           <p class="step-desc">Photos are optional, but they help us review your painting project more accurately.</p>
 
           <input type="file" name="Project Photos" multiple accept="image/*" />
-          <div class="hint" style="margin-bottom:16px;">
+          <div class="hint">
             Additional project photos can also be shared later using your preferred contact method.
           </div>
 
+          <div class="nav-row">
+            <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+          </div>
+        </section>
+
+        <!-- STEP 12 -->
+        <section class="step" data-title="Contact Information">
+          <h2>How can we reach you?</h2>
+          <p class="step-desc">Please enter your contact information so we can follow up on your request.</p>
+
           <div class="field-grid">
-            <input type="text" id="fullName" name="Full Name" placeholder="Full Name" />
-            <input type="text" id="phone" name="Phone Number" placeholder="Phone Number" />
-            <input type="email" id="email" name="Email Address" placeholder="Email Address" />
+            <input type="text" id="fullName" name="Full Name" placeholder="Full Name" autocomplete="name" />
+            <input type="text" id="phone" name="Phone Number" placeholder="Phone Number (example: 813-555-1234)" autocomplete="tel" inputmode="tel" />
+            <input type="email" id="email" name="Email Address" placeholder="Email Address" autocomplete="email" />
             <select id="contactMethod" name="Preferred Contact Method">
               <option value="">Preferred contact method</option>
               <option>Phone call</option>
@@ -685,14 +715,14 @@ Example:
 
           <div class="nav-row">
             <button type="button" class="nav-btn secondary" onclick="prevStep()">Back</button>
-            <button type="button" class="nav-btn" onclick="nextStep()">Next</button>
+            <button type="button" class="nav-btn" onclick="nextStep()">Review My Request</button>
           </div>
         </section>
 
-        <!-- STEP 12 -->
+        <!-- REVIEW -->
         <section class="step" data-title="Review & Submit">
           <h2>Review your request</h2>
-          <p class="step-desc">Please review your painting project details before submitting.</p>
+          <p class="step-desc">Please review your project details before submitting.</p>
 
           <div class="summary" id="summaryBox"></div>
 
@@ -727,7 +757,9 @@ Example:
       projectType: '',
       surfaceCondition: '',
       paintStatus: '',
-      areaSize: '',
+      knowsMeasurements: '',
+      measurementMethod: '',
+      standardSize: '',
       projectDetails: '',
       timeline: '',
       visit: ''
@@ -735,6 +767,7 @@ Example:
 
     document.querySelectorAll('[data-group]').forEach(group => {
       const groupName = group.getAttribute('data-group');
+
       group.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
@@ -744,10 +777,17 @@ Example:
           if (groupName === 'projectType') document.getElementById('projectTypeInput').value = btn.dataset.value;
           if (groupName === 'surfaceCondition') document.getElementById('surfaceConditionInput').value = btn.dataset.value;
           if (groupName === 'paintStatus') document.getElementById('paintStatusInput').value = btn.dataset.value;
-          if (groupName === 'areaSize') {
-            document.getElementById('areaSizeInput').value = btn.dataset.value;
-            handleAreaSize();
+
+          if (groupName === 'knowsMeasurements') {
+            document.getElementById('knowsMeasurementsInput').value = btn.dataset.value;
+            handleMeasurementKnowledge();
           }
+
+          if (groupName === 'measurementMethod') {
+            document.getElementById('measurementMethodInput').value = btn.dataset.value;
+            handleMeasurementMethod();
+          }
+
           if (groupName === 'projectDetails') document.getElementById('projectDetailsInput').value = btn.dataset.value;
           if (groupName === 'timeline') document.getElementById('timelineInput').value = btn.dataset.value;
           if (groupName === 'visit') document.getElementById('visitInput').value = btn.dataset.value;
@@ -757,28 +797,58 @@ Example:
       });
     });
 
-    function handleAreaSize() {
-      const noticeBox = document.getElementById('areaNoticeBox');
-      const detailsBox = document.getElementById('areaDetailsBox');
+    document.getElementById('standardProjectSize').addEventListener('change', function() {
+      singleChoiceState.standardSize = this.value;
+      document.getElementById('standardSizeInput').value = this.value;
+      hideError(currentStep);
+    });
 
-      if (singleChoiceState.areaSize === 'Not sure') {
-        noticeBox.classList.remove('hidden');
-        detailsBox.classList.add('hidden');
-        document.getElementById('roomsCount').value = '';
-        document.getElementById('wallHeight').value = '';
-        document.getElementById('sqftApprox').value = '';
-      } else if (singleChoiceState.areaSize === 'I want to enter exact details') {
-        noticeBox.classList.add('hidden');
-        detailsBox.classList.remove('hidden');
-      } else if (singleChoiceState.areaSize) {
-        noticeBox.classList.add('hidden');
-        detailsBox.classList.add('hidden');
+    function handleMeasurementKnowledge() {
+      const yesBox = document.getElementById('measurementYesBox');
+      const noBox = document.getElementById('measurementNoBox');
+
+      if (singleChoiceState.knowsMeasurements === 'Yes, I know the project size') {
+        yesBox.classList.remove('hidden');
+        noBox.classList.add('hidden');
+      } else if (singleChoiceState.knowsMeasurements === 'No, I do not know the project size') {
+        yesBox.classList.add('hidden');
+        noBox.classList.remove('hidden');
+        singleChoiceState.measurementMethod = '';
+        singleChoiceState.standardSize = '';
+        document.getElementById('measurementMethodInput').value = '';
+        document.getElementById('standardSizeInput').value = '';
+        clearMeasurementMethodSelections();
+        document.getElementById('standardProjectSize').value = '';
         document.getElementById('roomsCount').value = '';
         document.getElementById('wallHeight').value = '';
         document.getElementById('sqftApprox').value = '';
       } else {
-        noticeBox.classList.add('hidden');
-        detailsBox.classList.add('hidden');
+        yesBox.classList.add('hidden');
+        noBox.classList.add('hidden');
+      }
+    }
+
+    function clearMeasurementMethodSelections() {
+      document.querySelectorAll('[data-group="measurementMethod"] .option-btn').forEach(btn => {
+        btn.classList.remove('selected');
+      });
+      document.getElementById('standardSizeBox').classList.add('hidden');
+      document.getElementById('customSizeBox').classList.add('hidden');
+    }
+
+    function handleMeasurementMethod() {
+      const standardBox = document.getElementById('standardSizeBox');
+      const customBox = document.getElementById('customSizeBox');
+
+      if (singleChoiceState.measurementMethod === 'Select a standard project size') {
+        standardBox.classList.remove('hidden');
+        customBox.classList.add('hidden');
+      } else if (singleChoiceState.measurementMethod === 'Enter custom measurements') {
+        standardBox.classList.add('hidden');
+        customBox.classList.remove('hidden');
+      } else {
+        standardBox.classList.add('hidden');
+        customBox.classList.add('hidden');
       }
     }
 
@@ -825,7 +895,7 @@ Example:
       if (index === 1) {
         const checked = steps[index].querySelectorAll('input[type="checkbox"]:checked');
         if (checked.length === 0) {
-          showError(index, 'Please select at least one area.');
+          showError(index, 'Please select at least one scope item.');
           return false;
         }
       }
@@ -841,18 +911,33 @@ Example:
       }
 
       if (index === 4) {
-        if (!singleChoiceState.areaSize) {
-          showError(index, 'Please select one option to continue.');
+        if (!singleChoiceState.knowsMeasurements) {
+          showError(index, 'Please select whether you know the project size.');
           return false;
         }
 
-        if (singleChoiceState.areaSize === 'I want to enter exact details') {
-          const rooms = document.getElementById('roomsCount').value.trim();
-          const height = document.getElementById('wallHeight').value.trim();
-          const sqft = document.getElementById('sqftApprox').value.trim();
-          if (!rooms || !height || !sqft) {
-            showError(index, 'Please enter number of rooms, wall height, and approximate square footage.');
+        if (singleChoiceState.knowsMeasurements === 'Yes, I know the project size') {
+          if (!singleChoiceState.measurementMethod) {
+            showError(index, 'Please choose how you want to provide the project size.');
             return false;
+          }
+
+          if (singleChoiceState.measurementMethod === 'Select a standard project size') {
+            const standard = document.getElementById('standardProjectSize').value.trim();
+            if (!standard) {
+              showError(index, 'Please select a standard project size.');
+              return false;
+            }
+          }
+
+          if (singleChoiceState.measurementMethod === 'Enter custom measurements') {
+            const rooms = document.getElementById('roomsCount').value.trim();
+            const height = document.getElementById('wallHeight').value.trim();
+            const sqft = document.getElementById('sqftApprox').value.trim();
+            if (!rooms || !height || !sqft) {
+              showError(index, 'Please enter number of rooms, wall height, and approximate square footage.');
+              return false;
+            }
           }
         }
       }
@@ -889,11 +974,12 @@ Example:
         return false;
       }
 
-      if (index === 10) {
+      if (index === 11) {
         const name = document.getElementById('fullName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const email = document.getElementById('email').value.trim();
         const method = document.getElementById('contactMethod').value.trim();
+
         if (!name || !phone || !email || !method) {
           showError(index, 'Please complete name, phone, email, and preferred contact method.');
           return false;
@@ -914,27 +1000,40 @@ Example:
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function getPaintingAreas() {
-      return Array.from(document.querySelectorAll('input[name="Painting Areas[]"]:checked')).map(i => i.value);
+    function getScopeValues() {
+      return Array.from(document.querySelectorAll('input[name="Scope of Work[]"]:checked')).map(i => i.value);
     }
 
-    function getAreaSummary() {
-      if (singleChoiceState.areaSize === 'I want to enter exact details') {
-        return `Exact details: ${document.getElementById('roomsCount').value || 'N/A'} rooms • ${document.getElementById('wallHeight').value || 'N/A'} ft wall height • ${document.getElementById('sqftApprox').value || 'N/A'} sqft`;
+    function getMeasurementSummary() {
+      if (singleChoiceState.knowsMeasurements === 'No, I do not know the project size') {
+        return 'Does not know project size';
       }
-      return singleChoiceState.areaSize || '—';
+
+      if (singleChoiceState.knowsMeasurements === 'Yes, I know the project size') {
+        if (singleChoiceState.measurementMethod === 'Select a standard project size') {
+          return `Knows project size • Standard size: ${document.getElementById('standardProjectSize').value || 'N/A'}`;
+        }
+
+        if (singleChoiceState.measurementMethod === 'Enter custom measurements') {
+          return `Knows project size • Custom details: ${document.getElementById('roomsCount').value || 'N/A'} rooms • ${document.getElementById('wallHeight').value || 'N/A'} ft wall height • ${document.getElementById('sqftApprox').value || 'N/A'} sqft`;
+        }
+
+        return 'Knows project size';
+      }
+
+      return '—';
     }
 
     function buildSummary() {
       const summaryBox = document.getElementById('summaryBox');
-      const areas = getPaintingAreas();
+      const scope = getScopeValues();
 
       const items = [
         ['Project Type', singleChoiceState.projectType || '—'],
-        ['Painting Areas', areas.length ? areas.join(', ') : '—'],
+        ['Scope of Work', scope.length ? scope.join(', ') : '—'],
         ['Surface Condition', singleChoiceState.surfaceCondition || '—'],
-        ['Paint Status', singleChoiceState.paintStatus || '—'],
-        ['Area Size', getAreaSummary()],
+        ['Paint & Materials', singleChoiceState.paintStatus || '—'],
+        ['Measurements', getMeasurementSummary()],
         ['Project Details', singleChoiceState.projectDetails || '—'],
         ['Project Description', document.getElementById('projectDescription').value.trim() || '—'],
         ['Timeline', singleChoiceState.timeline || '—'],
@@ -956,15 +1055,15 @@ Example:
     }
 
     function buildLeadMessage() {
-      const areas = getPaintingAreas().join(', ') || 'N/A';
+      const scope = getScopeValues().join(', ') || 'N/A';
 
       return `New Painting Lead
 
 Project Type: ${singleChoiceState.projectType || 'N/A'}
-Painting Areas: ${areas}
+Scope of Work: ${scope}
 Surface Condition: ${singleChoiceState.surfaceCondition || 'N/A'}
-Paint Status: ${singleChoiceState.paintStatus || 'N/A'}
-Area Size: ${getAreaSummary()}
+Paint & Materials: ${singleChoiceState.paintStatus || 'N/A'}
+Measurements: ${getMeasurementSummary()}
 Project Details: ${singleChoiceState.projectDetails || 'N/A'}
 Project Description: ${document.getElementById('projectDescription').value.trim() || 'N/A'}
 Timeline: ${singleChoiceState.timeline || 'N/A'}
@@ -979,8 +1078,13 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
 
     function buildBackupLinks() {
       const msg = buildLeadMessage();
-      document.getElementById('whatsAppBackup').href = 'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
-      document.getElementById('smsBackup').href = 'sms:18135917560?body=' + encodeURIComponent(msg);
+
+      document.getElementById('whatsAppBackup').href =
+        'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+
+      document.getElementById('smsBackup').href =
+        'sms:18135917560?body=' + encodeURIComponent(msg);
+
       document.getElementById('emailBackup').href =
         'mailto:getestimatefast@gmail.com?subject=' +
         encodeURIComponent('New Painting Lead') +
@@ -991,10 +1095,20 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
   </script>
 
   <script>
-    const paintingForm = document.getElementById('paintingForm');
+    const leadForm = document.getElementById('lead-form');
 
-    if (paintingForm) {
-      paintingForm.addEventListener('submit', function () {
+    if (leadForm) {
+      leadForm.addEventListener('submit', function () {
+        const fullName = document.getElementById('fullName')?.value.trim() || 'New Lead';
+        const service = 'Painting';
+        const zip = document.getElementById('zip')?.value.trim() || 'No ZIP';
+        const timeline = singleChoiceState.timeline || 'No Timeline';
+
+        const subjectField = document.getElementById('email-subject');
+        if (subjectField) {
+          subjectField.value = `${fullName} - ${service} - ${zip} - ${timeline}`;
+        }
+
         gtag('event', 'conversion', {
           'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
         });
