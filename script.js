@@ -8,10 +8,14 @@ const progressFill = document.getElementById('progress-fill');
 const modal = document.getElementById('successModal');
 const closeModal = document.getElementById('closeModal');
 const whatsappShare = document.getElementById('whatsappShare');
+
 let currentStep = 1;
 
 function updateStep() {
-  steps.forEach(step => step.classList.toggle('active', Number(step.dataset.step) === currentStep));
+  steps.forEach(step => {
+    step.classList.toggle('active', Number(step.dataset.step) === currentStep);
+  });
+
   stepLabel.textContent = `Step ${currentStep} of ${steps.length}`;
   progressFill.style.width = `${(currentStep / steps.length) * 100}%`;
   backBtn.style.visibility = currentStep === 1 ? 'hidden' : 'visible';
@@ -21,15 +25,23 @@ function updateStep() {
 
 function setHiddenValue(container, fieldName, multi) {
   const hiddenInput = form.querySelector(`input[name="${fieldName}"]`);
-  const selected = [...container.querySelectorAll('.option-btn.selected')].map(btn => btn.textContent.trim());
+  if (!hiddenInput) return;
+
+  const selected = [...container.querySelectorAll('.option-btn.selected')]
+    .map(btn => btn.textContent.trim());
+
   hiddenInput.value = multi ? selected.join(', ') : (selected[0] || '');
 }
 
 document.querySelectorAll('.single-select').forEach(group => {
   const fieldName = group.dataset.field;
+
   group.querySelectorAll('.option-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      group.querySelectorAll('.option-btn').forEach(item => item.classList.remove('selected'));
+      group.querySelectorAll('.option-btn').forEach(item => {
+        item.classList.remove('selected');
+      });
+
       btn.classList.add('selected');
       setHiddenValue(group, fieldName, false);
     });
@@ -38,6 +50,7 @@ document.querySelectorAll('.single-select').forEach(group => {
 
 document.querySelectorAll('.multi-select').forEach(group => {
   const fieldName = group.dataset.field;
+
   group.querySelectorAll('.option-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.classList.toggle('selected');
@@ -48,6 +61,7 @@ document.querySelectorAll('.multi-select').forEach(group => {
 
 function validateCurrentStep() {
   const activeStep = form.querySelector(`.form-step[data-step="${currentStep}"]`);
+
   const inputs = [...activeStep.querySelectorAll('input, select, textarea')]
     .filter(el => !['hidden', 'checkbox'].includes(el.type));
 
@@ -71,6 +85,7 @@ function validateCurrentStep() {
 
 nextBtn.addEventListener('click', () => {
   if (!validateCurrentStep()) return;
+
   currentStep += 1;
   updateStep();
   window.scrollTo({ top: form.offsetTop - 90, behavior: 'smooth' });
@@ -93,16 +108,21 @@ form.addEventListener('submit', async (event) => {
 
   if (!validateCurrentStep()) return;
 
-  const formData = new FormData(form);
+  const fullName = form.querySelector('[name="full_name"]')?.value.trim() || '';
+  const phoneNumber = form.querySelector('[name="phone_number"]')?.value.trim() || '';
+  const email = form.querySelector('[name="email"]')?.value.trim() || '';
+  const projectType = form.querySelector('[name="project_type"]')?.value.trim() || '';
+  const services = form.querySelector('[name="services_needed"]')?.value.trim() || '';
+  const timeline = form.querySelector('[name="timeline"]')?.value.trim() || '';
+  const city = form.querySelector('[name="city"]')?.value.trim() || '';
+  const zip = form.querySelector('[name="zip_code"]')?.value.trim() || '';
 
-  const fullName = formData.get('full_name') || '';
-  const phoneNumber = formData.get('phone_number') || '';
-  const email = formData.get('email') || '';
-  const projectType = formData.get('project_type') || '';
-  const services = formData.get('services_needed') || '';
-  const timeline = formData.get('timeline') || '';
-  const city = formData.get('city') || '';
-  const zip = formData.get('zip_code') || '';
+  const subjectField = document.getElementById('email-subject');
+  if (subjectField) {
+    subjectField.value = `${fullName || 'New Lead'} - ${projectType || services || 'Service'} - ${zip || city || 'No ZIP'} - ${timeline || 'No Timeline'}`;
+  }
+
+  const formData = new FormData(form);
 
   const whatsappMessage = encodeURIComponent(
     `New Lead from GetEstimateFast\n\n` +
@@ -115,7 +135,9 @@ form.addEventListener('submit', async (event) => {
     `Location: ${city} ${zip}`
   );
 
-  whatsappShare.href = `https://wa.me/18135917560?text=${whatsappMessage}`;
+  if (whatsappShare) {
+    whatsappShare.href = `https://wa.me/18135917560?text=${whatsappMessage}`;
+  }
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending...';
@@ -123,15 +145,21 @@ form.addEventListener('submit', async (event) => {
   try {
     const response = await fetch('https://formsubmit.co/ajax/getestimatefast@gmail.com', {
       method: 'POST',
-      headers: { 'Accept': 'application/json' },
+      headers: { Accept: 'application/json' },
       body: formData,
     });
 
-    if (!response.ok) throw new Error('Unable to submit form');
+    if (!response.ok) {
+      throw new Error('Unable to submit form');
+    }
 
     modal.classList.remove('hidden');
     form.reset();
-    document.querySelectorAll('.option-btn.selected').forEach(btn => btn.classList.remove('selected'));
+
+    document.querySelectorAll('.option-btn.selected').forEach(btn => {
+      btn.classList.remove('selected');
+    });
+
     currentStep = 1;
     updateStep();
   } catch (error) {
@@ -148,7 +176,9 @@ closeModal.addEventListener('click', () => {
 });
 
 modal.addEventListener('click', (event) => {
-  if (event.target === modal) modal.classList.add('hidden');
+  if (event.target === modal) {
+    modal.classList.add('hidden');
+  }
 });
 
 updateStep();
