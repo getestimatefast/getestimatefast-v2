@@ -676,10 +676,17 @@ Example:
           <h2>Add photos and your contact information</h2>
           <p class="step-desc">Photos are optional, but they help us review your drywall project more accurately.</p>
 
-          <input type="file" name="Project Photos" multiple accept="image/*" />
-          <div class="hint" style="margin-bottom:16px;">
-            Additional project photos can also be shared later using your preferred contact method.
-          </div>
+<label>Upload Project Photos (optional)</label>
+
+<input type="file" name="Photo 1" accept="image/*" />
+<input type="file" name="Photo 2" accept="image/*" />
+<input type="file" name="Photo 3" accept="image/*" />
+<input type="file" name="Photo 4" accept="image/*" />
+<input type="file" name="Photo 5" accept="image/*" />
+
+<div class="hint">
+  You may upload up to 5 photos. Max total size: 10MB.
+</div>
 
           <div class="field-grid">
             <input type="text" id="fullName" name="Full Name" placeholder="Full Name" />
