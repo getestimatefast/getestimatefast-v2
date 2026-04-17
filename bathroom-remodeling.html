@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18090208680"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18090208680');
+  </script>
 
-  gtag('config', 'AW-18090208680');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bathroom Remodeling Estimate | GetEstimateFast</title>
+
   <style>
     * { box-sizing: border-box; }
 
@@ -407,11 +408,9 @@
         </div>
       </div>
 
-      <<form id="lead-form"> action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
-
-  <input type="hidden" name="_next" value="https://www.getestimatefast.com/thank-you.html">
-
-          <input type="hidden" name="_subject" id="email-subject">
+      <form id="lead-form" action="https://formsubmit.co/getestimatefast@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_next" value="https://www.getestimatefast.com/thank-you.html">
+        <input type="hidden" name="_subject" id="email-subject">
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="Service" value="Bathroom Remodeling" />
@@ -424,7 +423,6 @@
         <input type="hidden" name="Timeline" id="timelineInput" />
         <input type="hidden" name="On-Site Evaluation" id="visitInput" />
 
-        <!-- STEP 1 -->
         <section class="step active" data-title="Project Type">
           <h2>What type of bathroom project do you need?</h2>
           <p class="step-desc">Select the option that best matches your bathroom remodel.</p>
@@ -446,7 +444,6 @@
           </div>
         </section>
 
-        <!-- STEP 2 -->
         <section class="step" data-title="Scope of Work">
           <h2>What work is needed?</h2>
           <p class="step-desc">Select all that apply to your project.</p>
@@ -478,7 +475,6 @@
           </div>
         </section>
 
-        <!-- STEP 3 -->
         <section class="step" data-title="Materials">
           <h2>How will materials be handled?</h2>
           <p class="step-desc">Choose the option that best matches your project.</p>
@@ -499,7 +495,6 @@
           </div>
         </section>
 
-        <!-- STEP 4 -->
         <section class="step" data-title="Measurements">
           <h2>Do you know your bathroom measurements?</h2>
           <p class="step-desc">This helps us determine whether an estimate can be reviewed more accurately within 24 hours.</p>
@@ -551,7 +546,6 @@
           </div>
         </section>
 
-        <!-- STEP 5 -->
         <section class="step" data-title="Project Details">
           <h2>What details do you already have?</h2>
           <p class="step-desc">Select the option that best describes your project status.</p>
@@ -571,7 +565,6 @@
           </div>
         </section>
 
-        <!-- STEP 6 -->
         <section class="step" data-title="Project Description">
           <h2>Tell us more about your project</h2>
           <p class="step-desc">The more details you provide, the more accurate your estimate will be.</p>
@@ -595,7 +588,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 7 -->
         <section class="step" data-title="Timeline">
           <h2>When would you like to start?</h2>
           <p class="step-desc">Choose the timeline that best fits your project plan.</p>
@@ -616,7 +608,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 8 -->
         <section class="step" data-title="Location">
           <h2>Where is the project located?</h2>
           <p class="step-desc">Please provide the city and ZIP code of the property.</p>
@@ -634,7 +625,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 9 -->
         <section class="step" data-title="On-Site Evaluation">
           <h2>Do you think an on-site evaluation may be needed?</h2>
 
@@ -655,7 +645,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 10 -->
         <section class="step" data-title="Photos">
           <h2>Would you like to add photos of the project area?</h2>
           <p class="step-desc">Photos are optional, but they help us review your bathroom project more accurately.</p>
@@ -671,7 +660,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 11 -->
         <section class="step" data-title="Contact Information">
           <h2>How can we reach you?</h2>
           <p class="step-desc">Please enter your contact information so we can follow up on your request.</p>
@@ -697,7 +685,6 @@ Example:
           </div>
         </section>
 
-        <!-- STEP 12 -->
         <section class="step" data-title="Review & Submit">
           <h2>Review your request</h2>
           <p class="step-desc">Please review your project details before submitting.</p>
@@ -744,6 +731,7 @@ Example:
 
     document.querySelectorAll('[data-group]').forEach(group => {
       const groupName = group.getAttribute('data-group');
+
       group.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
@@ -752,14 +740,17 @@ Example:
 
           if (groupName === 'projectType') document.getElementById('projectTypeInput').value = btn.dataset.value;
           if (groupName === 'materials') document.getElementById('materialsInput').value = btn.dataset.value;
+
           if (groupName === 'knowsMeasurements') {
             document.getElementById('knowsMeasurementsInput').value = btn.dataset.value;
             handleMeasurementKnowledge();
           }
+
           if (groupName === 'measurementMethod') {
             document.getElementById('measurementMethodInput').value = btn.dataset.value;
             handleMeasurementMethod();
           }
+
           if (groupName === 'projectDetails') document.getElementById('projectDetailsInput').value = btn.dataset.value;
           if (groupName === 'timeline') document.getElementById('timelineInput').value = btn.dataset.value;
           if (groupName === 'visit') document.getElementById('visitInput').value = btn.dataset.value;
@@ -946,6 +937,7 @@ Example:
         const phone = document.getElementById('phone').value.trim();
         const email = document.getElementById('email').value.trim();
         const method = document.getElementById('contactMethod').value.trim();
+
         if (!name || !phone || !email || !method) {
           showError(index, 'Please complete name, phone, email, and preferred contact method.');
           return false;
@@ -1042,8 +1034,13 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
 
     function buildBackupLinks() {
       const msg = buildLeadMessage();
-      document.getElementById('whatsAppBackup').href = 'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
-      document.getElementById('smsBackup').href = 'sms:18135917560?body=' + encodeURIComponent(msg);
+
+      document.getElementById('whatsAppBackup').href =
+        'https://wa.me/18135917560?text=' + encodeURIComponent(msg);
+
+      document.getElementById('smsBackup').href =
+        'sms:18135917560?body=' + encodeURIComponent(msg);
+
       document.getElementById('emailBackup').href =
         'mailto:getestimatefast@gmail.com?subject=' +
         encodeURIComponent('New Bathroom Remodeling Lead') +
@@ -1052,16 +1049,27 @@ Preferred Contact Method: ${document.getElementById('contactMethod').value.trim(
 
     showStep(0);
   </script>
-  <script>
-  const bathroomForm = document.getElementById('bathroomForm');
 
-  if (bathroomForm) {
-    bathroomForm.addEventListener('submit', function () {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
+  <script>
+    const leadForm = document.getElementById('lead-form');
+
+    if (leadForm) {
+      leadForm.addEventListener('submit', function () {
+        const fullName = document.getElementById('fullName')?.value.trim() || 'New Lead';
+        const service = 'Bathroom Remodeling';
+        const zip = document.getElementById('zip')?.value.trim() || 'No ZIP';
+        const timeline = singleChoiceState.timeline || 'No Timeline';
+
+        const subjectField = document.getElementById('email-subject');
+        if (subjectField) {
+          subjectField.value = `${fullName} - ${service} - ${zip} - ${timeline}`;
+        }
+
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18090208680/XRtTCKj-mpwcEKjbirJD'
+        });
       });
-    });
-  }
-</script>
+    }
+  </script>
 </body>
 </html>
